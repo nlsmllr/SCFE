@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
-import { newsreader } from '@/fonts';
+// import { newsreader } from '@/fonts';
 
 
 const palette = {

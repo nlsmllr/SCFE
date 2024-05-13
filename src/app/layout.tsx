@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter, newsreader } from '@/fonts';
+import { inter } from '@/fonts';
 import "./globals.css";
 import clsx from "clsx";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <body className={clsx(inter.variable, newsreader.variable, 'mx-auto')}>
+        <body className={clsx(inter.variable, 'mx-auto')}>
           {children}
         </body>
       </html>

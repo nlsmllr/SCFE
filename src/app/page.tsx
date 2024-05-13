@@ -31,9 +31,9 @@ export default function Void() {
         <div className="graphBox col-span-3">
           <NewExample />
         </div>
-        <div className="graphBox col-span-2">
+        {/* <div className="graphBox col-span-2">
           <Map />
-        </div>
+        </div> */}
       </section>
     </html>
   );
