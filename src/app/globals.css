@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply bg-zinc-800 inter-h5 text-white p-4;
+}
+
+.graphContainer {
+  @apply grid grid-cols-5 gap-4 pt-10 px-14
+}
+
+.graphBox {
+  @apply bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-300 p-4 rounded-xl;
+}
+
+.mapBox{
+  @apply rounded-xl;
+}

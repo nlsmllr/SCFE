@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/nils.mueller/Documents/TestCC/void/src/app/layout\":[\"static/media/c9a5bc6a7c948fb0-s.p.woff2\",\"static/media/3dfb7bb4b4eb3166.p.woff2\",\"static/media/a797f6869ce72aeb.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
