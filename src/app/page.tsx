@@ -15,20 +15,24 @@ import 'leaflet/dist/leaflet.css';
 export default function Void() {
   return (
     <html className='bg-zinc-950'>
-      <nav>
         <TopBar />
-      </nav>
       <section className='graphContainer flex justify-center'>
-        <div className="graphBox col-span-2">
+        <div className="md:col-span-2">
           <Example />
         </div>
-        <div className="graphBox col-span-1">
+        <div className="md:col-span-1">
           <RadChart />
         </div>
-        <div className="graphBox col-span-2">
+        <div className="md:col-span-2">
           <NewExample />
         </div>
-        <div className="graphBox col-span-3">
+        <div className="graphBox md:col-span-4">
+          <NewExample />
+        </div>
+        <div className="graphBox md:col-span-1">
+          <NewExample />
+        </div>
+        <div className="graphBox md:col-span-5">
           <NewExample />
         </div>
         {/* <div className="graphBox col-span-2">

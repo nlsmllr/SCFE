@@ -3,17 +3,13 @@
 @tailwind utilities;
 
 .header {
-  @apply bg-zinc-800 inter-h5 text-white p-4;
+  @apply z-10 sticky top-0 bg-zinc-800 opacity-100 inter-h5 text-white p-2;
 }
 
 .graphContainer {
-  @apply grid grid-cols-5 gap-4 pt-10 px-14
+  @apply grid grid-cols-1 md:grid-cols-5 gap-4 pt-5 md:pt-10 px-5 md:px-14
 }
 
 .graphBox {
   @apply bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-300 p-4 rounded-xl;
-}
-
-.mapBox{
-  @apply rounded-xl;
 }
