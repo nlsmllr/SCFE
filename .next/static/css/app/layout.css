@@ -643,7 +643,7 @@ inter {
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-  padding: 1rem;
+  padding: 0.5rem;
   transition-duration: 300ms;
 }
 
@@ -653,6 +653,10 @@ inter {
 }
 
 @media (min-width: 768px) {
+
+  .graphBox {
+    padding: 1rem;
+  }
 
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
