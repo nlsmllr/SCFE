@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
-// import { newsreader } from '@/fonts';
 
 
 const palette = {
@@ -43,7 +42,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        newsreader: ['var(--font-newsreader)'],
         inter: ['var(--font-inter)'],
       },
       colors: {
@@ -115,9 +113,6 @@ const config: Config = {
       addComponents({
         inter: {
           fontFamily: 'var(--font-inter)',
-        },
-        newsreader: {
-          fontFamily: 'var(--font-newsreader)',
         },
         '.inter-h1': {
           // 64px to 148px
@@ -207,73 +202,6 @@ const config: Config = {
           fontWeight: '400',
           lineHeight: '150%',
           letterSpacing: '-0.01em',
-        },
-        '.newsreader-h1': {
-          // 64px to 148px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,64—148 */
-          fontFamily: 'var(--font-newsreader)',
-          fontSize: 'clamp(4rem, 2.1514rem + 7.8873vi, 9.25rem)',
-          fontStyle: 'italic',
-          fontWeight: '400',
-          lineHeight: '125%',
-        },
-        '.newsreader-h2': {
-          // 36px to 96px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,36—96 */
-          fontFamily: 'var(--font-newsreader)',
-          fontSize: 'clamp(2.25rem, 0.9296rem + 5.6338vi, 6rem)',
-          fontStyle: 'italic',
-          fontWeight: '400',
-          lineHeight: '125%',
-          letterSpacing: '-0.01em',
-        },
-        '.newsreader-h3': {
-          // 36px to 72px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,36—72 */
-          fontFamily: 'var(--font-newsreader)',
-          fontSize: 'clamp(2.25rem, 1.4577rem + 3.3803vi, 4.5rem)',
-          fontStyle: 'italic',
-          fontWeight: '400',
-          lineHeight: 'clamp(2.425rem, 1.2982rem + 4.8075vi, 5.625rem)',
-        },
-        '.newsreader-h4': {
-          // 24 to 36px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,24—36 */
-          fontFamily: 'var(--font-newsreader)',
-          fontSize: 'clamp(1.5rem, 1.2359rem + 1.1268vi, 2.25rem)',
-          fontStyle: 'normal',
-          fontWeight: '400',
-          lineHeight: '127%',
-          letterSpacing: 'clamp(-0.0225rem, -0.0304rem + 0.0338vi, 0rem)',
-        },
-        '.newsreader-h5': {
-          // 16px to 32px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,16—32 */
-          fontFamily: 'var(--font-newsreader)',
-          fontSize: 'clamp(1rem, 0.6479rem + 1.5023vi, 2rem)',
-          fontStyle: 'normal',
-          fontWeight: '300',
-          lineHeight: 'clamp(1.5rem, 1.007rem + 2.1033vi, 2.9rem)',
-          letterSpacing: '-0.03em',
-        },
-        '.newsreader-subtitle': {
-          // 14px to 24px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,14—24 */
-          fontFamily: 'var(--font-newsreader)',
-          fontSize: 'clamp(0.875rem, 0.6549rem + 0.939vi, 1.5rem);',
-          fontStyle: 'italic',
-          fontWeight: '400',
-          lineHeight: '125%',
-          letterSpacing: '0.02em',
-        },
-        '.newsreader-body-base': {
-          // 12px to 24px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,12—24 */
-          fontFamily: 'var(--font-newsreader)',
-          fontSize: 'clamp(0.75rem, 0.4859rem + 1.1268vi, 1.5rem)',
-          fontStyle: 'normal',
-          fontWeight: '400',
-          lineHeight: '150%',
         },
         '.typography-button-sm': {
           fontFamily: 'var(--font-inter)',
