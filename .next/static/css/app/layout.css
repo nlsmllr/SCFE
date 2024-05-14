@@ -570,6 +570,22 @@ video {
 inter {
   font-family: var(--font-inter);
 }
+.inter-h5 {
+  font-family: var(--font-inter);
+  font-size: clamp(1rem, 0.6479rem + 1.5023vi, 2rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(1.5rem, 1.007rem + 2.1033vi, 2.9rem);
+  letter-spacing: -0.03em;
+}
+.inter-body-base {
+  font-family: var(--font-inter);
+  font-size: clamp(0.75rem, 0.4859rem + 1.1268vi, 1.5rem);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
 .inter-body-sm {
   font-family: var(--font-inter);
   font-size: clamp(0.875rem, 0.831rem + 0.1878vi, 1rem);
@@ -577,6 +593,36 @@ inter {
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.01em;
+}
+.absolute {
+  position: absolute;
+}
+.left-0 {
+  left: 0px;
+}
+.top-11 {
+  top: 2.75rem;
+}
+.top-\[-490px\] {
+  top: -490px;
+}
+.top-1 {
+  top: 0.25rem;
+}
+.-top-10 {
+  top: -2.5rem;
+}
+.-top-12 {
+  top: -3rem;
+}
+.top-20 {
+  top: 5rem;
+}
+.top-16 {
+  top: 4rem;
+}
+.top-\[-4090px\] {
+  top: -4090px;
 }
 .col-span-2 {
   grid-column: span 2 / span 2;
@@ -588,12 +634,72 @@ inter {
 .flex {
   display: flex;
 }
+.w-full {
+  width: 100%;
+}
+.items-center {
+  align-items: center;
+}
 .justify-center {
   justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.bg-zinc-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+}
+.bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 .bg-zinc-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 11 / var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
+}
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-40 {
+  padding: 10rem;
+}
+.pr-5 {
+  padding-right: 1.25rem;
+}
+.pr-20 {
+  padding-right: 5rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .header {
@@ -644,18 +750,44 @@ inter {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
   padding: 0.5rem;
+  --tw-brightness: brightness(.75);
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   transition-duration: 300ms;
 }
 
 .graphBox:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  --tw-brightness: brightness(1);
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (min-width: 768px) {
 
   .graphBox {
     padding: 1rem;
+  }
+}
+
+.menuBlock {
+  font-family: var(--font-inter);
+  font-size: clamp(0.75rem, 0.4859rem + 1.1268vi, 1.5rem);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+
+  .md\:static {
+    position: static;
+  }
+
+  .md\:top-16 {
+    top: 4rem;
   }
 
   .md\:col-span-1 {
@@ -673,5 +805,40 @@ inter {
   .md\:col-span-5 {
     grid-column: span 5 / span 5;
   }
-}
 
+  .md\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
+  }
+
+  .md\:pr-20 {
+    padding-right: 5rem;
+  }
+
+  .md\:pr-4 {
+    padding-right: 1rem;
+  }
+}

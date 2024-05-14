@@ -11,5 +11,9 @@
 }
 
 .graphBox {
-  @apply bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-300 p-2 md:p-4 rounded-xl;
+  @apply grayscale hover:grayscale-0 brightness-75 hover:brightness-100 bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-300 p-2 md:p-4 rounded-xl;
+}
+
+.menuBlock {
+  @apply inter-body-base
 }
