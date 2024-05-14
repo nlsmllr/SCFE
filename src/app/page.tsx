@@ -49,6 +49,24 @@ export default function Void() {
           <div className="md:col-span-5">
             <NewExample />
           </div>
+          <div className="md:col-span-5">
+            <NewExample />
+          </div>
+          <div className="md:col-span-5">
+            <NewExample />
+          </div>
+          <div className="md:col-span-5">
+            <NewExample />
+          </div>
+          <div className="md:col-span-5">
+            <NewExample />
+          </div>
+          <div className="md:col-span-5">
+            <NewExample />
+          </div>
+          <div className="md:col-span-5">
+            <NewExample />
+          </div>
         </section>
       </body>
     </html>
