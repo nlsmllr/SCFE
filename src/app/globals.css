@@ -11,9 +11,50 @@
 }
 
 .graphBox {
-  @apply grayscale hover:grayscale-0 brightness-75 hover:brightness-100 bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-300 p-2 md:p-4 rounded-xl;
+  @apply grayscale hover:grayscale-0 brightness-75 hover:brightness-100 bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-500 p-2 md:p-4 rounded-xl;
 }
 
 .menuBlock {
   @apply inter-body-base
+}
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-text {
+  animation: fadeInOut 1.5s forwards ease-out;
+  position: fixed;
+  /* Ensure the animation container is fixed */
+  top: 0;
+  /* Align the top edge */
+  left: 0;
+  /* Align the left edge */
+  right: 0;
+  /* Align the right edge */
+  bottom: 0;
+  /* Align the bottom edge */
+  display: flex;
+  /* Use Flexbox to center the text */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  z-index: 1000;
+  /* Ensure it appears above other content */
 }
