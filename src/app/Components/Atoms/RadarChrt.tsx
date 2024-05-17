@@ -15,6 +15,7 @@ export const RadarChrt = ({ title, subtitle }: { title: string, subtitle: string
           <Radar name="MF" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
           <Radar name="AF" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
           <Legend />
+          <Tooltip />
         </RadarChart>
       </ResponsiveContainer>
     </div>
