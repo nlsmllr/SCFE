@@ -1,5 +1,6 @@
 import { ResponsiveContainer, PieChart, Pie, Tooltip } from 'recharts';
 import { pieData01, pieData02 } from '../../../../mock-data';
+import { normalize } from 'node:path/win32';
 export const PieChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
   return (
     <div className="graphBox">
@@ -10,8 +11,8 @@ export const PieChrt = ({ title, subtitle }: { title: string, subtitle: string }
       <ResponsiveContainer width={'100%'} height={200}>
 
         <PieChart width={250} height={250}>
-          <Pie data={pieData01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
-          <Pie data={pieData02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={70} fill="#82ca9d" label />
+          <Pie data={pieData01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" animationBegin={1900} />
+          <Pie data={pieData02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={70} fill="#82ca9d" label animationBegin={1500}/>
           <Tooltip />
         </PieChart>
       </ResponsiveContainer>

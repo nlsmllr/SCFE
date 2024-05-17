@@ -9,13 +9,13 @@ export const BarChrt = ({ title, subtitle }: { title: string, subtitle: string }
         <p className='graphSubtitle'>{subtitle}</p>
       </div>
       <ResponsiveContainer width={'100%'} height={200}>
-        <BarChart width={730} height={250} data={data}>
+        <BarChart width={730} height={250} data={data} >
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" fill="#8884d8" />
-          <Bar dataKey="uv" fill="#82ca9d" />
+          <Bar dataKey="pv" fill="#8884d8" animationBegin={1500}/>
+          <Bar dataKey="uv" fill="#82ca9d" animationBegin={1700}/>
         </BarChart>
       </ResponsiveContainer>
     </div>

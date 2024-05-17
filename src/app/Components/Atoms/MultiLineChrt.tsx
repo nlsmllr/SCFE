@@ -1,15 +1,16 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
 import { data } from '../../../../mock-data';
 
-export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle:string}) => {
+export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
   return (
     <div className="graphBox">
       <div className='flex flex-row items-baseline pb-6'>
-        <h4 className='graphTitle'>{ title }</h4>
-        <p className='graphSubtitle'>{ subtitle }</p>
+        <h4 className='graphTitle'>{title}</h4>
+        <p className='graphSubtitle'>{subtitle}</p>
       </div>
       <ResponsiveContainer width={'100%'} height={200}>
         <AreaChart
+
           width={600}
           height={200}
           data={data}
@@ -25,6 +26,7 @@ export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle:str
           <YAxis stroke="#cfcfcf" />
           <Tooltip />
           <Area
+            animationBegin={1500}
             type="monotone"
             dataKey="uv"
             stackId="1"
@@ -37,6 +39,7 @@ export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle:str
             stackId="1"
             stroke="#6e6e6e"
             fill="#6e6e6e"
+            animationBegin={1600}
           />
           <Area
             type="monotone"
@@ -44,6 +47,7 @@ export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle:str
             stackId="1"
             stroke="#ffc658"
             fill="#ffc658"
+            animationBegin={1700}
           />
         </AreaChart>
       </ResponsiveContainer>
