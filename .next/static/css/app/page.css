@@ -578,11 +578,17 @@ inter {
 .w-full {
   width: 100%;
 }
+.flex-row {
+  flex-direction: row;
+}
 .flex-col {
   flex-direction: column;
 }
 .items-center {
   align-items: center;
+}
+.items-baseline {
+  align-items: baseline;
 }
 .justify-center {
   justify-content: center;
@@ -603,6 +609,9 @@ inter {
 }
 .p-4 {
   padding: 1rem;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -663,9 +672,10 @@ inter {
 
   .graphContainer {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     padding-left: 3.5rem;
     padding-right: 3.5rem;
-    padding-top: 2.5rem;
   }
 }
 
@@ -716,8 +726,19 @@ inter {
   font-style: normal;
   line-height: clamp(1.5rem, 1.007rem + 2.1033vi, 2.9rem);
   letter-spacing: -0.03em;
-  padding-bottom: 1.5rem;
   padding-left: 0.25rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.graphSubtitle {
+  font-family: var(--font-inter);
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vi, 1rem);
+  font-style: normal;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  padding-left: 0.5rem;
   font-weight: 100;
   text-transform: uppercase;
   --tw-text-opacity: 1;

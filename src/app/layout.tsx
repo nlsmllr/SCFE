@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { inter } from '@/fonts';
+import { inter, roboto } from '@/fonts';
 import "./globals.css";
 import clsx from "clsx";
 
 export const metadata: Metadata = {
-  title: "VOID",
-  description: "Portal to the void",
+  title: "SMART CITIES",
+  description: "Portal to the city",
 };
 
 export default function RootLayout({
@@ -16,10 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Add link to Google Fonts for Newsreader */}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" />
       </head>
-      <body className={clsx(inter.variable, 'font-newsreader', 'mx-auto')}>
+      <body className={clsx(inter.variable, 'mx-auto')}>
         {children}
       </body>
     </html>
