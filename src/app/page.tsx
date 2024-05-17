@@ -35,26 +35,26 @@ export default function Void() {
         <section className='graphContainer flex justify-center'>
 
           <div className="md:col-span-5">
-            <NewExample title='Air Pollution'/>
+            <NewExample title='Air Pollution' />
           </div>
-          
+
           <div className="md:col-span-2">
-            <Example title='Humidity'/>
+            <Example title='Humidity' />
           </div>
           <div className="md:col-span-1">
-            <RadChart title='Radar'/>
+            <RadChart title='Radar' />
           </div>
           <div className="md:col-span-2">
-            <BarCrt title='Temperature'/>
+            <BarCrt title='Temperature' />
           </div>
           <div className="md:col-span-5">
             <Map />
           </div>
           <div className="md:col-span-2">
-          <NewExample title='CO2 Concentration'/>
+            <NewExample title='CO2 Concentration' />
           </div>
           <div className="md:col-span-3">
-          <NewExample title='Wind Speed'/>
+            <NewExample title='Wind Speed' />
           </div>
 
         </section>
