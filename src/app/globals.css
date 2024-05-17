@@ -15,7 +15,7 @@
 }
 
 .menuBlock {
-  @apply inter-body-base
+  @apply inter-body-base font-thin
 }
 
 .graphTitle {

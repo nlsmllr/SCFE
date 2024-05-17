@@ -862,6 +862,9 @@ inter {
 .items-baseline {
   align-items: baseline;
 }
+.justify-end {
+  justify-content: flex-end;
+}
 .justify-center {
   justify-content: center;
 }
@@ -987,9 +990,9 @@ inter {
   font-family: var(--font-inter);
   font-size: clamp(0.75rem, 0.4859rem + 1.1268vi, 1.5rem);
   font-style: normal;
-  font-weight: 300;
   line-height: 150%;
   letter-spacing: -0.01em;
+  font-weight: 100;
 }
 
 .graphTitle {
@@ -1111,6 +1114,10 @@ inter {
     margin-right: 1rem;
   }
 
+  .md\:mr-20 {
+    margin-right: 5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1125,6 +1132,14 @@ inter {
 
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .md\:justify-evenly {
+    justify-content: space-evenly;
   }
 
   .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
