@@ -538,6 +538,9 @@ inter {
 .absolute {
   position: absolute;
 }
+.relative {
+  position: relative;
+}
 .inset-0 {
   inset: 0px;
 }
@@ -547,8 +550,8 @@ inter {
 .right-0 {
   right: 0px;
 }
-.top-10 {
-  top: 2.5rem;
+.top-14 {
+  top: 3.5rem;
 }
 .top-\[-490px\] {
   top: -490px;
@@ -583,9 +586,6 @@ inter {
 }
 .justify-center {
   justify-content: center;
-}
-.justify-between {
-  justify-content: space-between;
 }
 .bg-zinc-700 {
   --tw-bg-opacity: 1;
@@ -628,12 +628,23 @@ inter {
   position: sticky;
   top: 0px;
   z-index: 10;
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  opacity: 1;
+  --tw-backdrop-blur: blur(16px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+@media (min-width: 768px) {
+
+  .header {
+    padding: 0.5rem;
+  }
 }
 
 .graphContainer {
@@ -749,6 +760,16 @@ inter {
   /* Center vertically */
   z-index: 1000;
   /* Ensure it appears above other content */
+}
+
+.hover\:blur-sm:hover {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 @media (min-width: 768px) {

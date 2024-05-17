@@ -10,10 +10,10 @@ export const TopBar = () => {
   };
 
   return (
-    <nav className="header flex justify-between items-center p-4 md:bg-transparent text-white">
-      <h2 className="inter-h3 md:pl-14 uppercase">Smart Cities</h2>
+    <nav className="header">
+      <h2 className="inter-h3 md:pl-14 uppercase hover:blur-sm">Smart Cities</h2>
       <div className="flex items-center md:pr-14">
-        <div className={`absolute md:relative bg-zinc-700 md:bg-transparent w-full md:w-auto left-0 md:left-auto right-0 bg-opacity-90 md:flex md:flex-row transition-transform duration-3000 ease-in ${menuOpen ? 'md:top-0 top-10' : 'top-[-490px]'}`}>
+        <div className={`absolute md:relative bg-zinc-700 md:bg-transparent w-full md:w-auto left-0 md:left-auto right-0 bg-opacity-90 md:flex md:flex-row transition-transform duration-3000 ease-in ${menuOpen ? 'md:top-0 top-14' : 'top-[-490px]'}`}>
           <ul className="flex flex-col md:flex-row md:space-x-4 md:mr-4">
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
               <a href="#home" className="menuBlock">Home</a>
@@ -29,8 +29,10 @@ export const TopBar = () => {
             </li>
           </ul>
         </div>
-        <button onClick={toggleMenu} className="inter-body-base md:ml-4">
-          {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+        <button onClick={toggleMenu} className="relative inter-body-base md:ml-4 focus:outline-none" style={{ width: '40px', height: '40px' }}>
+          <span className="absolute inset-0 flex justify-center items-center">
+            {menuOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+          </span>
         </button>
       </div>
     </nav>
