@@ -3,13 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import './globals.css';
 
-import { Example } from './Components/Atoms/Example';
-import { NewExample } from './Components/Atoms/NewExample';
 import { TopBar } from './Components/Atoms/TopBar';
-import { RadChart } from './Components/Atoms/RadChart';
+import { SingleLineChrt } from './Components/Atoms/SingleLineChrt';
+import { MultiLineChrt } from './Components/Atoms/MultiLineChrt';
+import { RadarChrt } from './Components/Atoms/RadarChrt';
 import { Map } from './Components/Atoms/Map';
-import { BarCrt } from './Components/Atoms/BarChart';
+import { BarChrt } from './Components/Atoms/BarChrt';
 import 'leaflet/dist/leaflet.css';
+import { PieChrt } from './Components/Atoms/PieChrt';
 
 export default function Void() {
   const [showText, setShowText] = useState(true);
@@ -34,27 +35,36 @@ export default function Void() {
         <TopBar />
         <section className='graphContainer flex justify-center'>
 
-          <div className="md:col-span-5">
-            <NewExample title='Air Pollution' subtitle='(%)'/>
+          <div className="md:col-span-2">
+            <PieChrt title='Air' subtitle='(%)' />
+          </div>
+
+          <div className="md:col-span-3">
+            <MultiLineChrt title='Air Pollution' subtitle='(%)' />
           </div>
 
           <div className="md:col-span-2">
-            <Example title='Humidity' subtitle='(%)' />
+            <SingleLineChrt title='Humidity' subtitle='(%)' />
           </div>
+
           <div className="md:col-span-1">
-            <RadChart title='Radar' subtitle='(%)'/>
+            <RadarChrt title='Radar' subtitle='(%)' />
           </div>
+
           <div className="md:col-span-2">
-            <BarCrt title='Temperature' subtitle='(°C)'/>
+            <BarChrt title='Temperature' subtitle='(°C)' />
           </div>
+
           <div className="md:col-span-5">
             <Map />
           </div>
+
           <div className="md:col-span-2">
-            <NewExample title='CO2 Concentration' subtitle='(%)'/>
+            <MultiLineChrt title='CO2 Concentration' subtitle='(%)' />
           </div>
+
           <div className="md:col-span-3">
-            <NewExample title='Wind Speed' subtitle='(KM/H)'/>
+            <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' />
           </div>
 
         </section>
