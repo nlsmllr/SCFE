@@ -898,8 +898,8 @@ inter {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.backdrop-blur-md {
-  --tw-backdrop-blur: blur(12px);
+.backdrop-blur {
+  --tw-backdrop-blur: blur(8px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition-transform {
@@ -1002,11 +1002,19 @@ inter {
   line-height: clamp(1.5rem, 1.007rem + 2.1033vi, 2.9rem);
   letter-spacing: -0.03em;
   padding-left: 0.25rem;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+@media (min-width: 768px) {
+
+  .graphTitle {
+    font-weight: 100;
+  }
+}
+
 .graphSubtitle {
   font-family: var(--font-inter);
   font-size: clamp(0.875rem, 0.831rem + 0.1878vi, 1rem);

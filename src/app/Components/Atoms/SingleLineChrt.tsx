@@ -14,7 +14,7 @@ export const SingleLineChrt = ({ title, subtitle }: { title: string, subtitle: s
           <CartesianGrid stroke="" strokeDasharray="5 5" />
           <XAxis className='inter-body-sm' stroke='#cfcfcf' dataKey="name" />
           <YAxis className='inter-body-sm' stroke='#cfcfcf' />
-          <Brush height={7} />
+          <Brush height={10} />
           <Tooltip />
         </LineChart>
       </ResponsiveContainer>

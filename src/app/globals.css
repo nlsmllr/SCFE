@@ -19,8 +19,9 @@
 }
 
 .graphTitle {
-  @apply text-white inter-h5 font-thin uppercase pl-1
+  @apply text-white inter-h5 font-light md:font-thin uppercase pl-1
 }
+
 .graphSubtitle {
   @apply text-white inter-body-sm font-thin uppercase pl-2
 }

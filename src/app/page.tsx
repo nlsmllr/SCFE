@@ -27,7 +27,7 @@ export default function Void() {
     <html className='bg-zinc-950'>
       <body className="min-h-screen">
         {showText && (
-          <div className=" backdrop-blur-md fixed inset-0 flex flex-col justify-center items-center bg-transparent fade-text">
+          <div className=" backdrop-blur fixed inset-0 flex flex-col justify-center items-center bg-transparent fade-text">
             {/* <img src="./SC_logo.png" alt="SC_logo" className="w-20 h-20 mb-4" /> */}
             <h1 className="inter-h1 uppercase text-center text-white">Smart Cities</h1>
           </div>
