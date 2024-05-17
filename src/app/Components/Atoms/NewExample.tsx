@@ -1,10 +1,10 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
 import { data } from '../../../../mock-data';
 
-export const NewExample = () => {
+export const NewExample = ({ title }: { title: string }) => {
   return (
     <div className="graphBox">
-
+      <h4 className='graphTitle'>{ title }</h4>
       <ResponsiveContainer width={'100%'} height={200}>
         <AreaChart
           width={600}

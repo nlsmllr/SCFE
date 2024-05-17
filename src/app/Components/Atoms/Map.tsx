@@ -18,14 +18,16 @@ export const Map: React.FC = () => {
   }, []);
 
   return (
-    <div className="mapBox">
-      {isClient && (
-        <LeafletMap center={[53.54666, 9.98213]} zoom={15} style={{ height: '200px', width: '100%' }}>
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-        </LeafletMap>
-      )}
+    <div className='graphBox'>
+      <div className="mapBox">
+        {isClient && (
+          <LeafletMap center={[53.54666, 9.98213]} zoom={15} style={{ height: '400px', width: '100%' }}>
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+          </LeafletMap>
+        )}
+      </div>
     </div>
   );
 };

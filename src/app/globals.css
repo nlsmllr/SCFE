@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header {
-  @apply z-10 sticky top-0 bg-zinc-800 opacity-100 inter-h5 text-white p-2;
+  @apply z-10 sticky top-0 bg-zinc-800 opacity-100 text-white p-2;
 }
 
 .graphContainer {
@@ -16,6 +16,10 @@
 
 .menuBlock {
   @apply inter-body-base
+}
+
+.graphTitle {
+  @apply text-white inter-h5 font-thin uppercase pb-6 pl-1
 }
 
 

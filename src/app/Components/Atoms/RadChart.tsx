@@ -1,10 +1,10 @@
 import { RadarChart, Radar, PolarGrid, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 import { radarData } from '../../../../mock-data';
 
-export const RadChart = () => {
+export const RadChart = ({ title }: { title: string }) => {
   return (
     <div className="graphBox">
-
+       <h4 className='graphTitle'>{ title }</h4>
       <ResponsiveContainer width={'100%'} height={200}>
         <RadarChart outerRadius={50} width={730} height={250} data={radarData}>
           <PolarGrid />

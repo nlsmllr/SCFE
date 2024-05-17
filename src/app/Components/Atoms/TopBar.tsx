@@ -10,8 +10,8 @@ export const TopBar = () => {
   };
 
   return (
-    <nav className="header flex justify-between items-center p-4 bg-zinc-800 text-white">
-      <h2 className="inter-h5 md:pl-14 ">Smart Cities Front End</h2>
+    <nav className="header flex justify-between items-center p-4 md:bg-transparent text-white">
+      <h2 className="inter-h3 md:pl-14 uppercase">Smart Cities</h2>
       <div className="flex items-center md:pr-14">
         <div className={`absolute md:relative bg-zinc-700 md:bg-transparent w-full md:w-auto left-0 md:left-auto right-0 bg-opacity-90 md:flex md:flex-row transition-transform duration-3000 ease-in ${menuOpen ? 'md:top-0 top-10' : 'top-[-490px]'}`}>
           <ul className="flex flex-col md:flex-row md:space-x-4 md:mr-4">
