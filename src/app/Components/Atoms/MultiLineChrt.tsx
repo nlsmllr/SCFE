@@ -25,7 +25,7 @@ export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle: st
           <XAxis stroke="#cfcfcf" dataKey="name" />
           <YAxis stroke="#cfcfcf" />
           <Tooltip />
-          <Area
+          <Area // Unten
             animationBegin={1500}
             type="monotone"
             dataKey="uv"
@@ -33,7 +33,7 @@ export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle: st
             stroke="#cfcfcf"
             fill="#cfcfcf"
           />
-          <Area
+          <Area // Mitte
             type="monotone"
             dataKey="pv"
             stackId="1"
@@ -41,7 +41,7 @@ export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle: st
             fill="#6e6e6e"
             animationBegin={1600}
           />
-          <Area
+          <Area // Oben
             type="monotone"
             dataKey="amt"
             stackId="1"

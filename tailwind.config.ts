@@ -17,10 +17,15 @@ const palette = {
     500: '#61c5ff',
     200: '#bfe8ff',
   },
-  yellow: {
-    700: '#ffc864',
-    500: '#fff0a1',
-    200: '#fff9da',
+  gold: {
+    // Gold
+    // #ffc658
+    
+    // Hellgrau
+    // #cfcfcf
+    700: '#fefefe',
+    500: '#fefefe',
+    200: '#fefefe',
   },
   white: {
     DEFAULT: '#ffffff',
@@ -45,15 +50,15 @@ const config: Config = {
         inter: ['var(--font-inter)'],
       },
       colors: {
-        'protofy-accent': {
+        'SC-accent': {
           primary: palette.green[500],
           secondary: {
             pink: palette.pink[500],
             blue: palette.blue[500],
-            yellow: palette.yellow[500],
+            gold: palette.gold[500],
           },
         },
-        'protofy-surface': {
+        'SC-surface': {
           primary: palette.white.DEFAULT,
           secondary: palette.black[50],
           inverted: palette.black.DEFAULT,
@@ -69,13 +74,13 @@ const config: Config = {
               DEFAULT: palette.blue[200],
               dark: palette.blue[700],
             },
-            yellow: {
-              DEFAULT: palette.yellow[200],
-              dark: palette.yellow[700],
+            gold: {
+              DEFAULT: palette.gold[200],
+              dark: palette.gold[700],
             },
           },
         },
-        'protofy-text': {
+        'SC-text': {
           primary: palette.black[800],
           secondary: {
             DEFAULT: palette.black[400],
@@ -86,7 +91,7 @@ const config: Config = {
             secondary: palette.white.alpha,
           },
         },
-        'protofy-border': {
+        'SC-border': {
           DEFAULT: palette.black[800],
           inverted: palette.white.DEFAULT,
         },

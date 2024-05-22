@@ -15,7 +15,7 @@
 }
 
 .menuBlock {
-  @apply inter-body-base font-thin
+  @apply inter-body-base font-thin  text-white hover:text-[#ffc658]
 }
 
 .graphTitle {
@@ -65,4 +65,36 @@
   /* Center vertically */
   z-index: 1000;
   /* Ensure it appears above other content */
+}
+
+/* Sidebar.css */
+
+.sidebar {
+  @apply fixed top-0 left-0 h-screen w-64 translate-x-[-100%];
+}
+
+.sidebar.open {
+  @apply translate-x-0;
+}
+
+.sidebar ul {
+  @apply list-none pt-28;
+}
+
+.sidebar li {
+  @apply p-3;
+}
+
+.toggle-button {
+  @apply fixed top-[50%] translate-y-[-50%] border-none p-3 z-[1001];
+  color: white;
+  
+}
+
+.toggle-button.shifted {
+  @apply ml-20
+}
+
+.graphContainer.shifted {
+  @apply ml-20;
 }
