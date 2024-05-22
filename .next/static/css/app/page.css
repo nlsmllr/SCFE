@@ -633,7 +633,7 @@ inter {
 .header {
   position: sticky;
   top: 0px;
-  z-index: 10;
+  z-index: 1200;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -647,9 +647,17 @@ inter {
 @media (min-width: 768px) {
 
   .header {
+    height: 9rem;
     padding: 0.5rem;
     --tw-backdrop-blur: blur(16px);
     backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header {
+    height: 7rem;
   }
 }
 
@@ -660,6 +668,9 @@ inter {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 @media (min-width: 768px) {
@@ -712,6 +723,7 @@ inter {
   line-height: 150%;
   letter-spacing: -0.01em;
   font-weight: 100;
+  text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -754,20 +766,16 @@ inter {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-
 @keyframes fadeInOut {
   0% {
     opacity: 1;
   }
-
   33% {
     opacity: 1;
   }
-
   66% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -776,68 +784,92 @@ inter {
 .fade-text {
   animation: fadeInOut 2.5s forwards ease-out;
   position: fixed;
-  /* Ensure the animation container is fixed */
   top: 0;
-  /* Align the top edge */
   left: 0;
-  /* Align the left edge */
   right: 0;
-  /* Align the right edge */
   bottom: 0;
-  /* Align the bottom edge */
   display: flex;
-  /* Use Flexbox to center the text */
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
-  /* Center vertically */
-  z-index: 1000;
-  /* Ensure it appears above other content */
+  z-index: 1300;
 }
 
-/* Sidebar.css */
+.sidebar-container {
+  position: relative;
+}
 
 .sidebar {
   position: fixed;
   top: 0px;
   left: 0px;
+  z-index: 1100;
   height: 100vh;
   width: 16rem;
   --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
-.sidebar.open {
+.sidebar-container:hover .sidebar {
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .sidebar ul {
+  height: 100vh;
   list-style-type: none;
-  padding-top: 7rem;
+  --tw-backdrop-blur: blur(16px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+@media (min-width: 768px) {
+
+  .sidebar ul {
+    margin-top: 9rem;
+    padding-left: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .sidebar ul {
+    margin-top: 7rem;
+  }
 }
 
 .sidebar li {
   padding: 0.75rem;
 }
 
-.toggle-button {
+.hover-area {
   position: fixed;
-  top: 50%;
-  z-index: 1001;
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  border-style: none;
-  padding: 0.75rem;
-  color: white;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 100vh;
+  width: 0.75rem;
+  background-color: transparent;
 }
 
-.toggle-button.shifted {
-  margin-left: 5rem;
+.lineContainer {
+  margin-left: 0.5rem;
+  display: flex;
+  height: 100vh;
+  align-items: center;
 }
 
-.graphContainer.shifted {
-  margin-left: 5rem;
+.custom-arrow {
+  height: 0px;
+  width: 0px;
+  border-top-width: 8px;
+  border-bottom-width: 8px;
+  border-left-width: 8px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  --tw-border-opacity: 1;
+  border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .hover\:blur-sm:hover {

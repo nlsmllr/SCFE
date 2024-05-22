@@ -3,23 +3,25 @@ import '../../globals.css';
 
 interface SidebarProps {
   categories: string[];
-  isOpen: boolean;
-  toggleSidebar: () => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ categories, isOpen, toggleSidebar }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ categories }) => {
   return (
-    <>
-      <button className="toggle-button" onClick={toggleSidebar}>
-        {isOpen ? '⮜' : '⮞'}
-      </button>
-      <nav className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
+    <div className="sidebar-container group">
+      <div className="hover-area">
+        <div className='lineContainer'>
+          <div className="custom-arrow" />
+        </div>
+      </div>
+      <nav className="sidebar">
         <ul>
           {categories.map((category, index) => (
-            <li className='menuBlock' key={index}>{category}</li>
+            <li className='menuBlock' key={index}>
+              <a href={`#${category}`}>{category}</a>
+            </li>
           ))}
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
