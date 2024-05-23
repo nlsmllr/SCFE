@@ -35,7 +35,7 @@ export default function Void() {
         <TopBar />
 
         <div className="relative group">
-          <Sidebar categories={['Weather', 'Parking', 'Stuff']} />
+          <Sidebar categories={['Weather', 'Parking', 'Stuff', 'more stuff', 'much more stuff']} />
           <section className="graphContainer flex justify-center">
             <div className="md:col-span-2">
               <PieChrt title='Air' subtitle='(%)' />
