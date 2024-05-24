@@ -33,8 +33,8 @@ export default function Void() {
   };
 
   const charts = [
-    { component: <PieChrt title='Air' subtitle='(%)' category={[Categories.Weather]} />, categories: [Categories.Weather], colSpan: 2 },
-    { component: <MultiLineChrt title='Air Pollution' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
+    { component: <PieChrt title='Air' subtitle='(%)' category={[Categories.Weather]} />, categories: [Categories.Weather], colSpan: 1 },
+    { component: <MultiLineChrt title='Air Pollution' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 2 },
     { component: <SingleLineChrt title='Humidity' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
     { component: <RadarChrt title='Radar' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
     { component: <BarChrt title='Temperature' subtitle='(°C)' />, categories: [Categories.Weather], colSpan: 1 },
