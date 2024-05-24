@@ -880,15 +880,6 @@ inter {
 .p-4 {
   padding: 1rem;
 }
-.p-0 {
-  padding: 0px;
-}
-.p-40 {
-  padding: 10rem;
-}
-.p-32 {
-  padding: 8rem;
-}
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1247,11 +1238,6 @@ inter {
   .md\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-
-  .md\:mx-32 {
-    margin-left: 8rem;
-    margin-right: 8rem;
   }
 
   .md\:ml-4 {
