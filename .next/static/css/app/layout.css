@@ -1218,6 +1218,7 @@ inter {
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
+  padding-bottom: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1231,11 +1232,11 @@ inter {
 
 .footerHeadline {
   font-family: var(--font-inter);
-  font-size: clamp(2.25rem, 1.4577rem + 3.3803vi, 4.5rem);
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vi, 1rem);
   font-style: normal;
+  line-height: 100%;
+  letter-spacing: -0.01em;
   font-weight: 500;
-  line-height: clamp(2.425rem, 1.2982rem + 4.8075vi, 5.625rem);
-  letter-spacing: -0.05em;
   text-transform: uppercase;
 }
 

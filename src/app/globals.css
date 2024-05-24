@@ -104,9 +104,9 @@
 /* Footer */
 
 .footerContainer {
-  @apply mt-28 md:pr-14 flex justify-end items-baseline text-white;
+  @apply mt-28 pb-5 md:pr-14 flex justify-end items-baseline text-white;
 }
 
 .footerHeadline {
-  @apply inter-h3 hover:blur-sm uppercase;
+  @apply inter-body-sm font-medium hover:blur-sm uppercase;
 }
