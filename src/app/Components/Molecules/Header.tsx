@@ -14,7 +14,7 @@ export const TopBar = () => {
       <a href="https://scfe.vercel.app/">
         <h2 className="inter-h3 uppercase hover:blur-sm">Smart Cities</h2>
       </a>
-      <div className="flex items-center">
+      <div className="flex items-end">
         <div className={`absolute md:relative bg-zinc-700 md:bg-transparent w-full md:w-auto left-0 md:left-auto right-0 bg-opacity-90 md:flex md:flex-row transition-transform duration-3000 ease-in ${menuOpen ? 'md:top-0 top-14' : 'top-[-490px]'}`}>
           <ul className="flex flex-col md:flex-row justify-end">
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">

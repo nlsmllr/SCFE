@@ -1,7 +1,7 @@
 import { ResponsiveContainer, PieChart, Pie, Tooltip } from 'recharts';
 import { pieData01, pieData02 } from '../../../../mock-data';
 import { normalize } from 'node:path/win32';
-export const PieChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
+export const PieChrt = ({ title, subtitle, category }: { title: string, subtitle: string, category: string[] }) => {
   return (
     <div className="graphBox">
       <div className='flex flex-row items-baseline pb-6'>

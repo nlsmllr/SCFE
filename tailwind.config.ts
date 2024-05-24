@@ -186,7 +186,7 @@ const config: Config = {
           fontSize: 'clamp(0.75rem, 0.4859rem + 1.1268vi, 1.5rem)',
           fontStyle: 'normal',
           fontWeight: '300',
-          lineHeight: '150%',
+          lineHeight: '100%',
           letterSpacing: '-0.01em',
         },
         '.inter-body-lg': {
@@ -196,7 +196,7 @@ const config: Config = {
           fontSize: 'clamp(1.25rem, 0.8979rem + 1.5023vi, 2.25rem)',
           fontStyle: 'normal',
           fontWeight: '300',
-          lineHeight: '145%',
+          lineHeight: '100%',
           letterSpacing: '-0.01em',
         },
         '.inter-body-sm': {
@@ -205,7 +205,7 @@ const config: Config = {
           fontSize: 'clamp(0.875rem, 0.831rem + 0.1878vi, 1rem)',
           fontStyle: 'normal',
           fontWeight: '400',
-          lineHeight: '150%',
+          lineHeight: '100%',
           letterSpacing: '-0.01em',
         },
         '.typography-button-sm': {
@@ -213,7 +213,7 @@ const config: Config = {
           fontSize: '16px',
           fontStyle: 'normal',
           fontWeight: '500',
-          lineHeight: '1',
+          lineHeight: '100%',
           letterSpacing: '-0.01em',
         },
         '.typography-button-lg': {
@@ -221,7 +221,7 @@ const config: Config = {
           fontSize: '24px',
           fontStyle: 'normal',
           fontWeight: '500',
-          lineHeight: '1',
+          lineHeight: '100%',
           letterSpacing: '-0.01em',
         },
         '.rolling-banner-animation': {

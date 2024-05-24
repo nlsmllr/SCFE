@@ -1,8 +1,11 @@
+// src/components/Sidebar.tsx
+
 import React from 'react';
 import '../../globals.css';
+import { Categories } from '../../../Constants/categories';
 
 interface SidebarProps {
-  categories: string[];
+  categories: Categories[];
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ categories }) => {
