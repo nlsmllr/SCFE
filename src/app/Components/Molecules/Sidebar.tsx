@@ -5,10 +5,11 @@ import '../../globals.css';
 import { Categories } from '../../../Constants/categories';
 
 interface SidebarProps {
-  categories: Categories[];
+  categories: (Categories | 'All')[];
+  onCategorySelect: (category: Categories | 'All') => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ categories }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ categories, onCategorySelect }) => {
   return (
     <div className="sidebar-container group">
       <div className="hover-area">
@@ -19,7 +20,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ categories }) => {
       <nav className="sidebar">
         <ul>
           {categories.map((category, index) => (
-            <li className='menuBlock' key={index}>
+            <li className='menuBlock' key={index} onClick={() => onCategorySelect(category)}>
               <a href={`#${category}`}>{category}</a>
             </li>
           ))}

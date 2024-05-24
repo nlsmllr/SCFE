@@ -545,6 +545,12 @@ inter {
 .top-\[-490px\] {
   top: -490px;
 }
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -704,7 +710,7 @@ inter {
 @media (min-width: 768px) {
 
   .graphContainer {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     padding-left: 3.5rem;
@@ -967,22 +973,6 @@ inter {
 
   .md\:top-0 {
     top: 0px;
-  }
-
-  .md\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .md\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .md\:col-span-5 {
-    grid-column: span 5 / span 5;
   }
 
   .md\:mx-4 {
