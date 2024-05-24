@@ -27,7 +27,7 @@
 }
 
 .menuBlock {
-  @apply uppercase inter-body-base font-thin text-white hover:text-[#ffc658];
+  @apply uppercase inter-body-base font-thin text-white hover:text-[#ffc658] cursor-pointer;
 }
 
 .graphTitle {
