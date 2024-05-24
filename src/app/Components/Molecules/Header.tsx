@@ -32,7 +32,7 @@ export const TopBar = () => {
           </ul>
         </div>
         <button onClick={toggleMenu} className="relative inter-body-base md:ml-4 focus:outline-none" style={{ width: '25px', height: '40px' }}>
-          <span className="absolute inset-0 flex justify-center items-center">
+          <span className="absolute inset-0 flex justify-center items-end">
             {menuOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
           </span>
         </button>
