@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 
-
 const palette = {
   green: {
     500: '#59ED82',
@@ -18,11 +17,6 @@ const palette = {
     200: '#bfe8ff',
   },
   gold: {
-    // Gold
-    // #ffc658
-    
-    // Hellgrau
-    // #cfcfcf
     700: '#fefefe',
     500: '#fefefe',
     200: '#fefefe',
@@ -120,8 +114,6 @@ const config: Config = {
           fontFamily: 'var(--font-inter)',
         },
         '.inter-h1': {
-          // 64px to 148px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,64—148 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(4rem, 2.1514rem + 7.8873vi, 9.25rem)',
           fontStyle: 'normal',
@@ -130,8 +122,6 @@ const config: Config = {
           letterSpacing: '-0.07em',
         },
         '.inter-h2': {
-          // 36px to 96px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,36—96 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(2.25rem, 0.9296rem + 5.6338vi, 6rem)',
           fontStyle: 'normal',
@@ -140,8 +130,6 @@ const config: Config = {
           letterSpacing: '-0.06em',
         },
         '.inter-h3': {
-          // 36px to 72px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,36—72 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(2.25rem, 1.4577rem + 3.3803vi, 4.5rem)',
           fontStyle: 'normal',
@@ -150,8 +138,6 @@ const config: Config = {
           letterSpacing: '-0.05em',
         },
         '.inter-h4': {
-          // 20px to 36px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,20—36 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(1.25rem, 0.8979rem + 1.5023vi, 2.25rem)',
           fontStyle: 'normal',
@@ -160,8 +146,6 @@ const config: Config = {
           letterSpacing: '-0.03em',
         },
         '.inter-h5': {
-          // 16px to 32px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,16—32 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(1rem, 0.6479rem + 1.5023vi, 2rem)',
           fontStyle: 'normal',
@@ -170,8 +154,6 @@ const config: Config = {
           letterSpacing: '-0.03em',
         },
         '.inter-subtitle': {
-          // 14px to 24px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,14—24 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(0.875rem, 0.6549rem + 0.939vi, 1.5rem);',
           fontStyle: 'normal',
@@ -180,8 +162,6 @@ const config: Config = {
           letterSpacing: '-0.02em',
         },
         '.inter-body-base': {
-          // 12px to 24px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,12—24 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(0.75rem, 0.4859rem + 1.1268vi, 1.5rem)',
           fontStyle: 'normal',
@@ -190,8 +170,6 @@ const config: Config = {
           letterSpacing: '-0.01em',
         },
         '.inter-body-lg': {
-          // 20px to 36px
-          /* @link https://utopia.fyi/clamp/calculator?a=375,1440,20—36 */
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(1.25rem, 0.8979rem + 1.5023vi, 2.25rem)',
           fontStyle: 'normal',
@@ -200,7 +178,6 @@ const config: Config = {
           letterSpacing: '-0.01em',
         },
         '.inter-body-sm': {
-          // 14px to 16px
           fontFamily: 'var(--font-inter)',
           fontSize: 'clamp(0.875rem, 0.831rem + 0.1878vi, 1rem)',
           fontStyle: 'normal',
@@ -230,5 +207,11 @@ const config: Config = {
       });
     }),
   ],
+  safelist: [
+    {
+      pattern: /^col-span-(1|2|3|4|5|6|7|8|9|10|11|12)$/,
+    },
+  ],
 };
+
 export default config;
