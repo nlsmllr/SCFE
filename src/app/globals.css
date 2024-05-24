@@ -38,6 +38,18 @@
   @apply text-white inter-body-sm font-thin uppercase pl-2;
 }
 
+.filler-box {
+  @apply border border-gray-500 flex items-center justify-center p-4;
+  height: 100%;
+}
+
+.filler-text {
+  @apply text-white;
+}
+
+
+
+
 @keyframes fadeInOut {
   0% {
     opacity: 1;
@@ -69,6 +81,8 @@
   z-index: 1300;
 }
 
+
+/* Sidebar */
 .sidebar-container {
   @apply relative;
 }

@@ -903,15 +903,6 @@ inter {
 .pr-6 {
   padding-right: 1.5rem;
 }
-.pl-4 {
-  padding-left: 1rem;
-}
-.pl-12 {
-  padding-left: 3rem;
-}
-.font-thin {
-  font-weight: 100;
-}
 .uppercase {
   text-transform: uppercase;
 }
@@ -1112,6 +1103,25 @@ inter {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.filler-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  padding: 1rem;
+  height: 100%;
+}
+
+.filler-text {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+
+
+
 @keyframes fadeInOut {
   0% {
     opacity: 1;
@@ -1143,6 +1153,8 @@ inter {
   z-index: 1300;
 }
 
+
+/* Sidebar */
 .sidebar-container {
   position: relative;
 }
