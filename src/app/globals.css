@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header {
-  @apply z-[1200] md:h-36 lg:h-28 sticky top-0 flex justify-between items-center p-2 px-6 md:p-2 text-white md:backdrop-blur-lg;
+  @apply z-[1200] md:h-36 lg:h-28 sticky top-0 flex justify-between items-center p-2 px-6 md:p-14 text-white md:backdrop-blur-lg;
 }
 
 .graphContainer {
@@ -30,12 +30,15 @@
   0% {
     opacity: 1;
   }
+
   33% {
     opacity: 1;
   }
+
   66% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -78,10 +81,20 @@
   @apply fixed top-0 left-0 h-screen w-3 bg-transparent z-10;
 }
 
-.lineContainer{
-@apply ml-2 flex items-center h-screen
+.lineContainer {
+  @apply ml-2 flex items-center h-screen
 }
 
 .custom-arrow {
   @apply w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-white;
+}
+
+/* Footer */
+
+.footerContainer {
+  @apply mt-28 md:pr-14 flex justify-end items-baseline text-white;
+}
+
+.footerHeadline {
+  @apply inter-h3 hover:blur-sm uppercase;
 }

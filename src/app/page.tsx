@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import './globals.css';
 
-import { TopBar } from './Components/Molecules/TopBar';
+import { TopBar } from './Components/Molecules/Header';
 import { SingleLineChrt } from './Components/Atoms/SingleLineChrt';
 import { MultiLineChrt } from './Components/Atoms/MultiLineChrt';
 import { RadarChrt } from './Components/Atoms/RadarChrt';
@@ -12,6 +12,7 @@ import { BarChrt } from './Components/Atoms/BarChrt';
 import 'leaflet/dist/leaflet.css';
 import { PieChrt } from './Components/Atoms/PieChrt';
 import { Sidebar } from './Components/Molecules/Sidebar';
+import { Footer } from './Components/Molecules/Footer';
 
 export default function Void() {
   const [showText, setShowText] = useState(true);
@@ -69,6 +70,7 @@ export default function Void() {
               <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' />
             </div>
           </section>
+          <Footer />
         </div>
       </body>
     </html>

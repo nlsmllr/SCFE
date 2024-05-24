@@ -880,8 +880,23 @@ inter {
 .p-4 {
   padding: 1rem;
 }
+.p-0 {
+  padding: 0px;
+}
+.p-40 {
+  padding: 10rem;
+}
+.p-32 {
+  padding: 8rem;
+}
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+.pr-3 {
+  padding-right: 0.75rem;
+}
+.pr-6 {
+  padding-right: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -920,7 +935,7 @@ inter {
 
   .header {
     height: 9rem;
-    padding: 0.5rem;
+    padding: 3.5rem;
     --tw-backdrop-blur: blur(16px);
     backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
@@ -1042,12 +1057,15 @@ inter {
   0% {
     opacity: 1;
   }
+
   33% {
     opacity: 1;
   }
+
   66% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -1144,6 +1162,48 @@ inter {
   border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+/* Footer */
+
+.footerContainer {
+  margin-top: 7rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+
+  .footerContainer {
+    padding-right: 3.5rem;
+  }
+}
+
+.footerHeadline {
+  font-family: var(--font-inter);
+  font-size: clamp(2.25rem, 1.4577rem + 3.3803vi, 4.5rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(2.425rem, 1.2982rem + 4.8075vi, 5.625rem);
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.footerHeadline:hover {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:text-\[\#ffc658\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 198 88 / var(--tw-text-opacity));
+}
+
+.hover\:opacity-60:hover {
+  opacity: 0.6;
+}
+
 .hover\:blur-sm:hover {
   --tw-blur: blur(4px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1189,6 +1249,11 @@ inter {
     margin-right: 1rem;
   }
 
+  .md\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
   .md\:ml-4 {
     margin-left: 1rem;
   }
@@ -1215,14 +1280,6 @@ inter {
 
   .md\:p-0 {
     padding: 0px;
-  }
-
-  .md\:pl-14 {
-    padding-left: 3.5rem;
-  }
-
-  .md\:pr-14 {
-    padding-right: 3.5rem;
   }
 
   .md\:backdrop-blur {
