@@ -21,7 +21,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ categories, onCategorySelect }
         <ul>
           {categories.map((category, index) => (
             <li className='menuBlock' key={index} onClick={() => onCategorySelect(category)}>
-              <a href={`#${category}`}>{category}</a>
+              {category}
             </li>
           ))}
         </ul>
