@@ -11,9 +11,10 @@ export const TopBar = () => {
 
   return (
     <nav className="header">
-      <a href="https://scfe.vercel.app/">
-        <h2 className="inter-h3 uppercase hover:blur-sm">Smart Cities</h2>
-      </a>
+      <div className="flex items-baseline">
+        <a href="https://scfe.vercel.app/"><h2 className="inter-h3 uppercase hover:blur-sm">Smart Cities</h2></a>
+        <h3 className="graphTitle hover:blur-sm">only Desktop atm</h3>
+      </div>
       <div className="flex items-end">
         <div className={`absolute md:relative bg-zinc-700 md:bg-transparent w-full md:w-auto left-0 md:left-auto right-0 bg-opacity-90 md:flex md:flex-row transition-transform duration-3000 ease-in ${menuOpen ? 'md:top-0 top-14' : 'top-[-490px]'}`}>
           <ul className="flex flex-col md:flex-row justify-end">

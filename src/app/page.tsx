@@ -41,6 +41,14 @@ export default function Void() {
     { component: <Map />, categories: [Categories.Stuff], colSpan: 3 },
     { component: <MultiLineChrt title='CO2 Concentration' subtitle='(%)' />, categories: [Categories.Parking], colSpan: 2 },
     { component: <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' />, categories: [Categories.Stuff], colSpan: 1 },
+    { component: <PieChrt title='Air' subtitle='(%)' category={[Categories.Weather]} />, categories: [Categories.Weather], colSpan: 2 },
+    { component: <MultiLineChrt title='Air Pollution' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
+    { component: <SingleLineChrt title='Humidity' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
+    { component: <RadarChrt title='Radar' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
+    { component: <BarChrt title='Temperature' subtitle='(°C)' />, categories: [Categories.Weather], colSpan: 1 },
+    { component: <Map />, categories: [Categories.Stuff], colSpan: 3 },
+    { component: <MultiLineChrt title='CO2 Concentration' subtitle='(%)' />, categories: [Categories.Parking], colSpan: 2 },
+    { component: <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' />, categories: [Categories.Stuff], colSpan: 1 },
   ];
 
   const filteredCharts = selectedCategory && selectedCategory !== 'All'
