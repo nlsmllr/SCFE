@@ -14,6 +14,7 @@ import { PieChrt } from './Components/Atoms/PieChrt';
 import { Sidebar } from './Components/Molecules/Sidebar';
 import { Footer } from './Components/Molecules/Footer';
 import { Categories } from './../Constants/categories';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Void() {
   const [showText, setShowText] = useState(true);
@@ -59,15 +60,30 @@ export default function Void() {
         <div className="relative group">
           <Sidebar categories={['All', Categories.Weather, Categories.Parking, Categories.Stuff]} onCategorySelect={handleCategorySelect} />
           <section className="graphContainer flex justify-center">
-            {filteredCharts.length > 0 ? (
-              filteredCharts.map((chart, index) => (
-                <div key={index} className={`col-span-${chart.colSpan}`}>
-                  {chart.component}
-                </div>
-              ))
-            ) : (
-              <p>Select a category to view the charts</p>
-            )}
+            <AnimatePresence>
+              {filteredCharts.length > 0 ? (
+                filteredCharts.map((chart, index) => (
+                  <motion.div
+                    key={index}
+                    className={`col-span-${chart.colSpan}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    layout
+                  >
+                    {chart.component}
+                  </motion.div>
+                ))
+              ) : (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  Select a category to view the charts
+                </motion.p>
+              )}
+            </AnimatePresence>
           </section>
           <Footer />
         </div>
