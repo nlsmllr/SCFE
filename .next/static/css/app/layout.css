@@ -860,6 +860,9 @@ inter {
 .flex {
   display: flex;
 }
+.h-screen {
+  height: 100vh;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -902,15 +905,6 @@ inter {
 }
 .pr-6 {
   padding-right: 1.5rem;
-}
-.pl-4 {
-  padding-left: 1rem;
-}
-.pl-12 {
-  padding-left: 3rem;
-}
-.font-thin {
-  font-weight: 100;
 }
 .uppercase {
   text-transform: uppercase;

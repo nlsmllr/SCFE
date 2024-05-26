@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
-import { data } from '../../../../mock-data';
+import { data } from '../../../Constants/mock-data';
 
 export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
   return (

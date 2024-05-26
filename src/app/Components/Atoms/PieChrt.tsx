@@ -1,5 +1,5 @@
 import { ResponsiveContainer, PieChart, Pie, Tooltip } from 'recharts';
-import { pieData01, pieData02 } from '../../../../mock-data';
+import { pieData01, pieData02 } from '../../../Constants/mock-data';
 import { normalize } from 'node:path/win32';
 export const PieChrt = ({ title, subtitle, category }: { title: string, subtitle: string, category: string[] }) => {
   return (

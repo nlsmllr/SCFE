@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Brush, Area } from 'recharts';
-import { data } from '../../../../mock-data';
+import { data } from '../../../Constants/mock-data';
 
 export const SingleLineChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
   return (

@@ -1,5 +1,5 @@
 import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Label } from 'recharts';
-import { data } from '../../../../mock-data';
+import { data } from '../../../Constants/mock-data';
 
 export const BarChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
   return (

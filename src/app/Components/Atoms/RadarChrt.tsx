@@ -1,5 +1,5 @@
 import { RadarChart, Radar, PolarGrid, XAxis, YAxis, Text, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart, PolarAngleAxis, PolarRadiusAxis, Label } from 'recharts';
-import { radarData } from '../../../../mock-data';
+import { radarData } from '../../../Constants/mock-data';
 
 export const RadarChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
   return (

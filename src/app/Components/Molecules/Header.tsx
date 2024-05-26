@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../globals.css';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Link from 'next/link';
 
 export const TopBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ export const TopBar = () => {
               <a href="#services" className="menuBlock">Services</a>
             </li>
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
-              <a href="#contact" className="menuBlock">Contact</a>
+              <Link href="/Contact" className="menuBlock">Contact</Link>
             </li>
           </ul>
         </div>
