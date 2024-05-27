@@ -45,7 +45,7 @@ export default function Void() {
         <TopBar />
 
         <div className="relative group">
-          <Sidebar categories={['All', Categories.Weather, Categories.Parking, Categories.Stuff]} onCategorySelect={handleCategorySelect} />
+          <Sidebar categories={['All', Categories.Weather, Categories.Parking, Categories.Traffic]} onCategorySelect={handleCategorySelect} />
           <section className="graphContainer flex justify-center">
             <AnimatePresence>
               {filteredCharts.length > 0 ? (
