@@ -14,7 +14,7 @@ export const charts = [
   { component: <SingleLineChrt title='Humidity' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
   { component: <RadarChrt title='Radar' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
   { component: <BarChrt title='Temperature' subtitle='(°C)' />, categories: [Categories.Weather], colSpan: 1 },
-  { component: <Map />, categories: [Categories.Traffic], colSpan: 3 },
+  { component: <Map title='Hamburg' subtitle='today' />, categories: [Categories.Traffic], colSpan: 3 },
   { component: <MultiLineChrt title='Co2 Concentration' subtitle='(%)' />, categories: [Categories.Parking], colSpan: 2 },
   { component: <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' />, categories: [Categories.Traffic], colSpan: 1 },
   { component: <PieChrt title='Air' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 2 },
@@ -22,7 +22,7 @@ export const charts = [
   { component: <SingleLineChrt title='Humidity' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
   { component: <RadarChrt title='Radar' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
   { component: <BarChrt title='Temperature' subtitle='(°C)' />, categories: [Categories.Weather], colSpan: 1 },
-  { component: <Map />, categories: [Categories.Traffic], colSpan: 3 },
+  { component: <Map title='Hamburg' subtitle='today'/>, categories: [Categories.Traffic], colSpan: 3 },
   { component: <MultiLineChrt title='CO2 Concentration' subtitle='(%)' />, categories: [Categories.Parking], colSpan: 2 },
   { component: <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' />, categories: [Categories.Traffic], colSpan: 1 },
 ];

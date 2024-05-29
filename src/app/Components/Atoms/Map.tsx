@@ -11,7 +11,13 @@ const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLaye
   ssr: false
 });
 
-export const Map: React.FC = () => {
+
+interface MapProps {
+  title: string;
+  subtitle: string;
+}
+
+export const Map: React.FC<MapProps> = ({ title, subtitle }) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -19,7 +25,11 @@ export const Map: React.FC = () => {
   }, []);
 
   return (
-    <div className='graphBox'>
+    <div className="graphBox">
+    <div className='flex flex-row items-baseline pb-6'>
+      <h4 className='graphTitle'>{title}</h4>
+      <p className='graphSubtitle'>{subtitle}</p>
+    </div>
       <div className="mapBox">
         {isClient && (
           <MapContainer center={[53.54666, 9.98213]} zoom={15} style={{ height: '400px', width: '100%' }}>
