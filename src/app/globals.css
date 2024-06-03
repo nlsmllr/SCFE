@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Hellgrün: #5bbd82 */
+/* Hellblau: #4599c8 */
+
 .html {
   @apply bg-zinc-950;
 }
@@ -27,7 +31,7 @@
 }
 
 .menuBlock {
-  @apply uppercase inter-body-base font-thin text-white hover:text-[#ffc658] cursor-pointer;
+  @apply uppercase inter-body-base font-thin text-white hover:text-[#5bbd82] cursor-pointer;
 }
 
 .graphTitle {

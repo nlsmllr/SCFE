@@ -45,8 +45,8 @@ export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle: st
             type="monotone"
             dataKey="amt"
             stackId="1"
-            stroke="#ffc658"
-            fill="#ffc658"
+            stroke="#5bbd82"
+            fill="#5bbd82"
             animationBegin={1700}
           />
         </AreaChart>

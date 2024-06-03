@@ -12,7 +12,7 @@ export const PieChrt = ({ title, subtitle }: { title: string, subtitle: string }
 
         <PieChart width={250} height={250}>
           <Pie  data={pieData01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#cfcfcf" animationBegin={1900} />
-          <Pie  data={pieData02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={70} fillOpacity={0.6} fill="#ffc658" background-opacity={75}  label animationBegin={1500}/>
+          <Pie  data={pieData02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={70} fillOpacity={0.6} fill="#5bbd82" background-opacity={75}  label animationBegin={1500}/>
           <Tooltip />
         </PieChart>
       </ResponsiveContainer>

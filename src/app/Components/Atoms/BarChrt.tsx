@@ -14,8 +14,8 @@ export const BarChrt = ({ title, subtitle }: { title: string, subtitle: string }
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" fill="#cfcfcf" animationBegin={1500}/>
-          <Bar dataKey="uv" fill="#ffc658" fillOpacity={0.6} animationBegin={1700}/>
+          <Bar dataKey="pv" fill="#5bbd82" animationBegin={1500}/>
+          <Bar dataKey="uv" fill="#cfcfcf" fillOpacity={0.6} animationBegin={1700}/>
         </BarChart>
       </ResponsiveContainer>
     </div>

@@ -12,7 +12,7 @@ export const RadarChrt = ({ title, subtitle }: { title: string, subtitle: string
         <RadarChart outerRadius={50} width={250} height={250} data={radarData} >
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
-          <Radar name="MF" dataKey="A" stroke="#ffc658" fill="#ffc658" fillOpacity={0.6} animationBegin={1500}/>
+          <Radar name="MF" dataKey="A" stroke="#5bbd82" fill="#5bbd82" fillOpacity={0.6} animationBegin={1500}/>
           <Radar name="AF" dataKey="B" stroke="#cfcfcf" fill="#cfcfcf" fillOpacity={0.6} animationBegin={1500}/>
           <Legend />
           <Tooltip />

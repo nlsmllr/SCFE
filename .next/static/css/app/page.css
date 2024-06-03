@@ -649,6 +649,10 @@ inter {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+
+/* Hellgrün: #5bbd82 */
+/* Hellblau: #4599c8 */
+
 .html {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 11 / var(--tw-bg-opacity));
@@ -798,7 +802,7 @@ inter {
 
 .menuBlock:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 198 88 / var(--tw-text-opacity));
+  color: rgb(91 189 130 / var(--tw-text-opacity));
 }
 
 .graphTitle {
@@ -977,9 +981,9 @@ inter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.hover\:text-\[\#ffc658\]:hover {
+.hover\:text-\[\#5bbd82\]:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 198 88 / var(--tw-text-opacity));
+  color: rgb(91 189 130 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-60:hover {
