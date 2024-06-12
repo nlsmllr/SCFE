@@ -772,14 +772,6 @@ video {
 inter {
   font-family: var(--font-inter);
 }
-.inter-h3 {
-  font-family: var(--font-inter);
-  font-size: clamp(2.25rem, 1.4577rem + 3.3803vi, 4.5rem);
-  font-style: normal;
-  font-weight: 500;
-  line-height: clamp(2.425rem, 1.2982rem + 4.8075vi, 5.625rem);
-  letter-spacing: -0.05em;
-}
 .inter-body-base {
   font-family: var(--font-inter);
   font-size: clamp(0.75rem, 0.4859rem + 1.1268vi, 1.5rem);
@@ -905,9 +897,6 @@ inter {
 }
 .pr-6 {
   padding-right: 1.5rem;
-}
-.uppercase {
-  text-transform: uppercase;
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1260,11 +1249,6 @@ inter {
 
 .hover\:opacity-60:hover {
   opacity: 0.6;
-}
-
-.hover\:blur-sm:hover {
-  --tw-blur: blur(4px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .focus\:outline-none:focus {
