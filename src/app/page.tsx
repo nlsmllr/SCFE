@@ -10,7 +10,9 @@ import { Footer } from './Components/Molecules/Footer';
 import { Categories } from './../Constants/categories';
 import { motion, AnimatePresence } from 'framer-motion';
 import { charts } from '../Constants/charts';
-// import logo from './logo.JPG'; // Fix the import path and extension
+import Image from 'next/image';
+import logo from './SC_logo.svg';
+// import logo from './SC_logo.png';
 
 
 export default function Void() {
@@ -41,8 +43,8 @@ export default function Void() {
       <body className="min-h-screen">
         {showText && (
           <div className="fadeInTextBG">
-            {/* <img src={logo} alt="alt Text" /> */}
-            <h1 className="fadeInText">Smart Cities</h1>
+            <Image src={logo} alt="alt Text" height={300}/>
+            {/* <h1 className="fadeInText">Smart Cities</h1> */}
           </div>
         )}
         <TopBar /> 
