@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../../globals.css';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../SC_logo_header.svg'
 
 export const TopBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +15,7 @@ export const TopBar = () => {
   return (
     <nav className="header">
       <div className="flex items-baseline">
-        <a href="https://scfe.vercel.app/"><h2 className="inter-h3 uppercase hover:blur-sm">Smart Cities</h2></a>
+        <a href="https://scfe.vercel.app/"><Image src={logo} alt={'logo no text'} height={70}/></a>
       </div>
       <div className="flex items-end">
         <div className={`absolute md:relative bg-zinc-700 md:bg-transparent w-full md:w-auto left-0 md:left-auto right-0 bg-opacity-90 md:flex md:flex-row transition-transform duration-3000 ease-in ${menuOpen ? 'md:top-0 top-14' : 'top-[-490px]'}`}>
