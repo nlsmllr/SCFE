@@ -4,6 +4,7 @@ import data from './../../../Constants/data/tempforecast.json'; // Import the JS
  
 export const BarChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
   const [chartData, setChartData] = useState([]); useEffect(() => { // Since we are importing the data directly, we can set it immediately
+    // @ts-expect-error: abc
     setChartData(data); }, []);
     console.log(data);
   return (
