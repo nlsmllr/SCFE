@@ -6,7 +6,7 @@ export const BarChrt = ({ title, subtitle }: { title: string, subtitle: string }
   const [chartData, setChartData] = useState([]); useEffect(() => { // Since we are importing the data directly, we can set it immediately
     // @ts-expect-error: abc
     setChartData(data); }, []);
-    console.log(data);
+    // console.log(data);
   return (
     <div className="graphBox">
       <div className='flex flex-row items-baseline pb-6'>
