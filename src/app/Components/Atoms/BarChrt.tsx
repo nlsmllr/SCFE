@@ -2,11 +2,10 @@ import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarC
 import { useEffect, useState } from 'react';
 import data from './../../../Constants/data/tempforecast.json'; // Import the JSON file
  
-export const BarChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
+export const BarChrt = ({ title, subtitle, data }: { title: string, subtitle: string, data: any[] }) => {
   const [chartData, setChartData] = useState([]); useEffect(() => { // Since we are importing the data directly, we can set it immediately
     // @ts-expect-error: abc
     setChartData(data); }, []);
-    // console.log(data);
   return (
     <div className="graphBox">
       <div className='flex flex-row items-baseline pb-6'>
