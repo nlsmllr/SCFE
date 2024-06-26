@@ -57,7 +57,7 @@ export default function Void() {
                 filteredCharts.map((chart, index) => (
                   <motion.div
                     key={index}
-                    className={`col-span-${chart.colSpan}`}
+                    className={`col-span-3 md:col-span-${chart.colSpan}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}

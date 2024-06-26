@@ -25,4 +25,5 @@ export const charts = [
   { component: <RadarChrt title='Radar' subtitle='(%)' />, categories: [Categories.Weather], colSpan: 1 },
   { component: <Map title='Hamburg' subtitle='today'/>, categories: [Categories.Traffic], colSpan: 3 },
   { component: <MultiLineChrt title='CO2 Concentration' subtitle='(%)' />, categories: [Categories.Parking], colSpan: 2 },
+  { component: <iframe src="https://www.wetteronline.de/wetter/wedel" title="W3Schools Free Online Web Tutorials"></iframe>, categories: [Categories.Parking], colSpan: 3 },
 ];
