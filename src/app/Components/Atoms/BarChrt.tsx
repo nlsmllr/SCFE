@@ -9,7 +9,6 @@ export const BarChrt = ({ title, subtitle, URL }: { title: string, subtitle: str
     fetch(URL).then(response => response.json()).then(data => setData(data)).catch(error => console.error('Error fetching data:', error));
   }, []);
 
-
     return (
       <div className="graphBox">
         <div className='flex flex-row items-baseline pb-6'>

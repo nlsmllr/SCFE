@@ -2,10 +2,13 @@ import { RadarChart, Radar, PolarGrid, XAxis, YAxis, Text, CartesianGrid, Toolti
 import { radarData } from '../../../Constants/mock-data';
 import { useEffect, useState } from 'react';
 
-export const RadarChrt = ({ title, subtitle, data }: { title: string, subtitle: string, data: any[] }) => {
-  const [chartData, setChartData] = useState([]); useEffect(() => { // Since we are importing the data directly, we can set it immediately
-    // @ts-expect-error: abc
-    setChartData(data); }, []);
+export const RadarChrt = ({ title, subtitle, URL }: { title: string, subtitle: string, URL: string }) => {
+
+  const [data, setData] = useState([]); useEffect(() => {
+    // Fetch data from a local JSON file or an API endpoint
+    fetch(URL).then(response => response.json()).then(data => setData(data)).catch(error => console.error('Error fetching data:', error));
+  }, []);
+
   return (
     <div className="graphBox">
       <div className='flex flex-row items-baseline pb-6'>
@@ -16,8 +19,8 @@ export const RadarChrt = ({ title, subtitle, data }: { title: string, subtitle: 
         <RadarChart outerRadius={50} width={250} height={250} data={data} >
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
-          <Radar name="MF" dataKey="A" stroke="#5bbd82" fill="#5bbd82" fillOpacity={0.6} animationBegin={1500}/>
-          <Radar name="AF" dataKey="B" stroke="#cfcfcf" fill="#cfcfcf" fillOpacity={0.6} animationBegin={1500}/>
+          <Radar name="MF" dataKey="A" stroke="#5bbd82" fill="#5bbd82" fillOpacity={0.6} animationBegin={1500} />
+          <Radar name="AF" dataKey="B" stroke="#cfcfcf" fill="#cfcfcf" fillOpacity={0.6} animationBegin={1500} />
           <Legend />
           <Tooltip />
         </RadarChart>
