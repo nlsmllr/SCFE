@@ -1,7 +1,14 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
-import { data } from '../../../Constants/mock-data';
+// import { data } from '../../../Constants/mock-data';
+import { useEffect, useState } from 'react';
 
-export const MultiLineChrt = ({ title, subtitle }: { title: string, subtitle: string }) => {
+export const MultiLineChrt = ({ title, subtitle, URL }: { title: string, subtitle: string, URL:string }) => {
+
+    const [data, setData] = useState([]); useEffect(() => {
+    // Fetch data from a local JSON file or an API endpoint
+    fetch(URL).then(response => response.json()).then(data => setData(data)).catch(error => console.error('Error fetching data:', error));
+  }, []);
+
   return (
     <div className="graphBox">
       <div className='flex flex-row items-baseline pb-6'>
