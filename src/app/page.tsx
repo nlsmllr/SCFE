@@ -12,7 +12,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { charts } from '../Constants/charts';
 import Image from 'next/image';
 import logo from './SC_logo.svg';
-// import logo from './SC_logo.png';
 
 
 export default function Void() {

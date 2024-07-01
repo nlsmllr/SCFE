@@ -11,29 +11,25 @@ import WeatherCard from '@/app/Components/Atoms/WeatherCard';
 
 
 // URLs of the API endpoint
-const temperatureURL = 'http://localhost:8080/api/weather/temperature'
-const humidityURL = 'http://localhost:8080/api/weather/humidity'
-const pressureURL = 'http://localhost:8080/api/weather/pressure'
-const seaLevelURL = 'http://localhost:8080/api/weather/sealevel'
-const windSpeedURL = 'http://localhost:8080/api/weather/windspeed'
-const windGustURL = 'http://localhost:8080/api/weather/windgust'
-const visibilityURL = 'http://localhost:8080/api/weather/visibility'
+const weatherAPI = 'http://localhost:8080/api/weather/';
+const temperatureURL = weatherAPI + "temperature";//'http://localhost:8080/api/weather/temperature'
 
-  
 // Displayed charts in order
 export const charts = [
   { component: <WeatherCard title='Aktuelles Wetter' subtitle='Wedel' />, categories: [Categories.Parking], colSpan: 1 },
-  { component: <BarChrt title='Temperature' unit='(°C)' URL= {temperatureURL} />, categories: [Categories.Weather], colSpan: 2 },
+  { component: <BarChrt title='Temperatur' unit='(°C)' URL= {weatherAPI + "temperature"} />, categories: [Categories.Weather], colSpan: 2 },
 
-  { component: <BarChrt title='Luftfeutigkeit' unit='(%)' URL={humidityURL} />, categories: [Categories.Weather], colSpan: 2 },
+  { component: <BarChrt title='Luftfeutigkeit' unit='(%)' URL= {weatherAPI + "humidity"} />, categories: [Categories.Weather], colSpan: 2 },
   { component: <TrashCalendar title='Müllabfuhrkalendar' subtitle='Wedel'/>, categories: [Categories.Trash], colSpan: 1 },
 
-  { component: <BarChrt title='⌀ Sichtweite' unit='(M)' URL={visibilityURL} />, categories: [Categories.Weather], colSpan: 1 },
-  { component: <BarChrt title='Luftdruck' unit='(hPa)' URL={pressureURL} />, categories: [Categories.Weather], colSpan: 2 },
+  { component: <BarChrt title='⌀ Sichtweite' unit='(M)' URL= {weatherAPI + "visibility"} />, categories: [Categories.Weather], colSpan: 1 },
+  { component: <BarChrt title='Luftdruck' unit='(hPa)'  URL= {weatherAPI + "pressure"} />, categories: [Categories.Weather], colSpan: 2 },
   
 
-  { component: <BarChrt title='Windgeschwindigkeit' unit='(meter/sec)' URL={windSpeedURL} />, categories: [Categories.Weather], colSpan: 2 },
-  { component: <BarChrt title='Windböen' unit='(meter/sec)' URL={windGustURL} />, categories: [Categories.Weather], colSpan: 1 },
+  { component: <BarChrt title='Windgeschwindigkeit' unit='(meter/sec)'  URL= {weatherAPI + "windspeed"}  />, categories: [Categories.Weather], colSpan: 2 },
+  { component: <BarChrt title='Windböen' unit='(meter/sec)'  URL= {weatherAPI + "windgust"}  />, categories: [Categories.Weather], colSpan: 1 },
+  
+  //{ component: <BarChrt title=' Atmosphärischer Druck auf dem Meeresspiegel' unit='(hPa)'  URL= {weatherAPI + "sealevel"}  />, categories: [Categories.Weather], colSpan: 1 },
 
   { component: <Map title='Eignungsgebiete Wärme in Wedel' subtitle='Ohne Sammelanschluss' geojsonUrl="http://localhost:8080/api/map/suitable_areas"/>, categories: [Categories.Traffic], colSpan: 3 },
 
