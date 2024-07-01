@@ -17,7 +17,7 @@ const temperatureURL = weatherAPI + "temperature";//'http://localhost:8080/api/w
 // Displayed charts in order
 export const charts = [
   { component: <WeatherCard title='Aktuelles Wetter' subtitle='Wedel' />, categories: [Categories.Weather], colSpan: 1 },
-  { component: <BarChrt title='Temperatur' unit='(°C)' URL= {weatherAPI + "temperature"} />, categories: [Categories.Weather], colSpan: 1 },
+  { component: <BarChrt title='Temperatur' unit='(°C)' URL= {weatherAPI + "temperature"} />, categories: [Categories.Weather], colSpan: 2 },
 
   { component: <BarChrt title='Luftfeutigkeit' unit='(%)' URL= {weatherAPI + "humidity"} />, categories: [Categories.Weather], colSpan: 2 },
   { component: <TrashCalendar title='Müllabfuhrkalendar' subtitle='Wedel'/>, categories: [Categories.Trash], colSpan: 1 },
