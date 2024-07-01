@@ -32,6 +32,7 @@ export const charts = [
 
   { component: <Map title='Eignungsgebiete Wärme in Wedel' subtitle='Ohne Sammelanschluss' geojsonUrl="http://localhost:8080/api/map/suitable_areas"/>, categories: [Categories.Traffic], colSpan: 3 },
 
+
   { component: <MultiLineChrt title='Air Pollution' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 1 },
   { component: <MultiLineChrt title='Co2 Concentration' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Parking], colSpan: 2 },
   { component: <PieChrt title='Air' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 2 },
@@ -43,4 +44,5 @@ export const charts = [
   { component: <Map title='Zusätzliche Eignungsgebiete in Wedel' subtitle='Ohne Sammelanschluss' geojsonUrl="http://localhost:8080/api/map/additional_areas"/>, categories: [Categories.Traffic], colSpan: 3 },
   { component: <MultiLineChrt title='CO2 Concentration' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Parking], colSpan: 2 },  
   { component: <PieChrt title='Air' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather, Categories.Traffic], colSpan: 1 },
+
 ];
