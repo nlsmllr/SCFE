@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
-import L from 'leaflet';
-import 'leaflet-defaulticon-compatibility';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import '../../globals.css';
 
-// Dynamic imports for MapContainer, TileLayer, GeoJSON, and Marker
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), {
-  ssr: false
+  ssr: false,
 });
-
 const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLayer), {
-  ssr: false
+  ssr: false,
 });
-
 const GeoJSON = dynamic(() => import('react-leaflet').then(mod => mod.GeoJSON), {
-  ssr: false
+  ssr: false,
 });
 
 interface GeojsonUrl {
@@ -33,19 +28,23 @@ interface MapProps {
 
 export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrls }) => {
   const [isClient, setIsClient] = useState(false);
-  const [geojsonData, setGeojsonData] = useState<{ [key: string]: any }>({}); // Object to store GeoJSON data
+  const [geojsonData, setGeojsonData] = useState<{ [key: string]: any }>({});
   const [activeDataSets, setActiveDataSets] = useState<string[]>(geojsonUrls.map(({ label }) => label));
 
   useEffect(() => {
-    setIsClient(true);
-
-    // Fetch the GeoJSON data from the API for all URLs
-    geojsonUrls.forEach(({ url, label }) => {
-      fetch(url)
-        .then(response => response.json())
-        .then(data => setGeojsonData(prevData => ({ ...prevData, [label]: data })))
-        .catch(error => console.error(`Error fetching GeoJSON data for ${label}:`, error));
-    });
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
+      // Load leaflet only on the client side
+      const L = require('leaflet');
+      require('leaflet-defaulticon-compatibility');
+      // Fetch the GeoJSON data from the API for all URLs
+      geojsonUrls.forEach(({ url, label }) => {
+        fetch(url)
+          .then(response => response.json())
+          .then(data => setGeojsonData(prevData => ({ ...prevData, [label]: data })))
+          .catch(error => console.error(`Error fetching GeoJSON data for ${label}:`, error));
+      });
+    }
   }, [geojsonUrls]);
 
   const toggleDataSet = (label: string) => {
@@ -58,9 +57,9 @@ export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrls }) => {
 
   return (
     <div className="graphBox">
-      <div className='flex flex-row items-baseline pb-6'>
-        <h4 className='graphTitle'>{title}</h4>
-        <p className='graphSubtitle'>{subtitle}</p>
+      <div className="flex flex-row items-baseline pb-6">
+        <h4 className="graphTitle">{title}</h4>
+        <p className="graphSubtitle">{subtitle}</p>
       </div>
       <div className="mapBox">
         {isClient && (
@@ -69,15 +68,11 @@ export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrls }) => {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            {geojsonUrls.map(({ label, color }) => (
-              activeDataSets.includes(label) && geojsonData[label] && (
-                <GeoJSON
-                  key={label}
-                  data={geojsonData[label]}
-                  style={() => ({ color })}
-                />
-              )
-            ))}
+            {geojsonUrls.map(({ label, color }) =>
+              activeDataSets.includes(label) && geojsonData[label] ? (
+                <GeoJSON key={label} data={geojsonData[label]} style={() => ({ color })} />
+              ) : null
+            )}
           </MapContainer>
         )}
       </div>

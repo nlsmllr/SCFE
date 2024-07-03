@@ -40,8 +40,6 @@ export const charts = [
       { url: mapAPI + "/heat/suitable_areas", label: 'Wärmekarte 1',color:'#FF00FF', },
       { url: mapAPI + "/heat/additional_areas", label: 'Wärmekarte 2',color:'#FF000F'}]}/>,
        categories: [Categories.Traffic], colSpan: 3 },
-
-
   
   { component: <MultiLineChrt title='Air Pollution' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 1 },
   { component: <MultiLineChrt title='Co2 Concentration' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Parking], colSpan: 2 },
