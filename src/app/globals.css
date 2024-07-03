@@ -27,7 +27,7 @@
 }
 
 .graphBox {
-  @apply font-light grayscale hover:grayscale-0 brightness-75 hover:brightness-100 bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-500 p-2 md:p-4 rounded-xl;
+  @apply w-full md:w-auto font-light grayscale hover:grayscale-0 brightness-75 hover:brightness-100 bg-zinc-900 hover:bg-zinc-800 inter-body-sm duration-500 p-2 md:p-4 rounded-xl;
 }
 
 .menuBlock {
@@ -35,7 +35,7 @@
 }
 
 .graphTitle {
-  @apply text-white inter-h5 font-light md:font-thin uppercase pl-1;
+  @apply text-white inter-h5 font-light md:font-thin uppercase pl-1 break-words;
 }
 
 .graphSubtitle {
