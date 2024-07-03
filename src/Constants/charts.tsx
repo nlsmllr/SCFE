@@ -6,7 +6,6 @@ import { BarChrt } from '../app/Components/Atoms/BarChrt';
 import { PieChrt } from '../app/Components/Atoms/PieChrt';
 import TrashCalendar from '@/app/Components/Atoms/TrashCalendar';
 import { Categories } from './categories';
-import { useState, useEffect } from 'react';
 import WeatherCard from '@/app/Components/Atoms/WeatherCard';
 import {AirQuality} from '@/app/Components/Atoms/AirQuality';
 
@@ -43,8 +42,6 @@ export const charts = [
        categories: [Categories.Traffic], colSpan: 3 },
 
 
-
-
   
   { component: <MultiLineChrt title='Air Pollution' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 1 },
   { component: <MultiLineChrt title='Co2 Concentration' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Parking], colSpan: 2 },
@@ -52,8 +49,9 @@ export const charts = [
   { component: <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' URL={temperatureURL} />, categories: [Categories.Traffic], colSpan: 1 },
   { component: <SingleLineChrt title='Humidity' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 1 },
   { component: <MultiLineChrt title='Wind Speed' subtitle='(KM/H)' URL={temperatureURL} />, categories: [Categories.Traffic], colSpan: 2 },
-  { component: <BarChrt title='Temperature' unit='(°C)'  URL= {temperatureURL}/>, categories: [Categories.Weather], colSpan: 2 },
+  { component: <BarChrt title='Temperature' unit='(°C)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 2 },
   { component: <RadarChrt title='Radar' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 1 },
   { component: <MultiLineChrt title='CO2 Concentration' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Parking], colSpan: 2 },  
   { component: <PieChrt title='Air' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather, Categories.Traffic], colSpan: 1 },
+
 ];
