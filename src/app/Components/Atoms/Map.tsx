@@ -63,7 +63,12 @@ export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrls }) => {
       </div>
       <div className="mapBox">
         {isClient && (
-          <MapContainer center={[53.5824, 9.7137]} zoom={15} style={{ height: '600px', width: '100%' }}>
+          <MapContainer
+            center={[53.5824, 9.7137]}
+            zoom={15}
+            style={{ height: '600px', width: '100%' }}
+            scrollWheelZoom={false} // Disable zooming with the scroll wheel
+          >
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -74,6 +79,7 @@ export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrls }) => {
               ) : null
             )}
           </MapContainer>
+
         )}
       </div>
       <div className="legend">
