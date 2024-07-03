@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
+import L from 'leaflet';
+import 'leaflet-defaulticon-compatibility';
 import '../../globals.css';
 
-// Dynamic imports for MapContainer, TileLayer, and GeoJSON
+// Dynamic imports for MapContainer, TileLayer, GeoJSON, and Marker
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), {
   ssr: false
 });
@@ -16,25 +19,42 @@ const GeoJSON = dynamic(() => import('react-leaflet').then(mod => mod.GeoJSON), 
   ssr: false
 });
 
+interface GeojsonUrl {
+  url: string;
+  label: string;
+  color: string;
+}
+
 interface MapProps {
   title: string;
   subtitle: string;
-  geojsonUrl: string; // Add this prop to accept the API URL
+  geojsonUrls: GeojsonUrl[]; // Array of GeoJSON URLs with labels and colors
 }
 
-export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrl }) => {
+export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrls }) => {
   const [isClient, setIsClient] = useState(false);
-  const [geojsonData, setGeojsonData] = useState<any>(null);
+  const [geojsonData, setGeojsonData] = useState<{ [key: string]: any }>({}); // Object to store GeoJSON data
+  const [activeDataSets, setActiveDataSets] = useState<string[]>(geojsonUrls.map(({ label }) => label));
 
   useEffect(() => {
     setIsClient(true);
 
-    // Fetch the GeoJSON data from the API
-    fetch(geojsonUrl)
-      .then(response => response.json())
-      .then(data => setGeojsonData(data))
-      .catch(error => console.error('Error fetching GeoJSON data:', error));
-  }, [geojsonUrl]);
+    // Fetch the GeoJSON data from the API for all URLs
+    geojsonUrls.forEach(({ url, label }) => {
+      fetch(url)
+        .then(response => response.json())
+        .then(data => setGeojsonData(prevData => ({ ...prevData, [label]: data })))
+        .catch(error => console.error(`Error fetching GeoJSON data for ${label}:`, error));
+    });
+  }, [geojsonUrls]);
+
+  const toggleDataSet = (label: string) => {
+    setActiveDataSets(prevActiveDataSets =>
+      prevActiveDataSets.includes(label)
+        ? prevActiveDataSets.filter(activeLabel => activeLabel !== label)
+        : [...prevActiveDataSets, label]
+    );
+  };
 
   return (
     <div className="graphBox">
@@ -44,16 +64,37 @@ export const Map: React.FC<MapProps> = ({ title, subtitle, geojsonUrl }) => {
       </div>
       <div className="mapBox">
         {isClient && (
-          <MapContainer center={[53.5824, 9.7137]} zoom={15} style={{ height: '400px', width: '100%' }}>
+          <MapContainer center={[53.5824, 9.7137]} zoom={15} style={{ height: '600px', width: '100%' }}>
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            {geojsonData && (
-              <GeoJSON data={geojsonData} />
-            )}
+            {geojsonUrls.map(({ label, color }) => (
+              activeDataSets.includes(label) && geojsonData[label] && (
+                <GeoJSON
+                  key={label}
+                  data={geojsonData[label]}
+                  style={() => ({ color })}
+                />
+              )
+            ))}
           </MapContainer>
         )}
+      </div>
+      <div className="legend">
+        {geojsonUrls.map(({ label, color }) => (
+          <div key={label} className="legend-item flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id={label}
+              checked={activeDataSets.includes(label)}
+              onChange={() => toggleDataSet(label)}
+              style={{ accentColor: color }}
+              className="checkbox"
+            />
+            <label htmlFor={label}>{label}</label>
+          </div>
+        ))}
       </div>
     </div>
   );

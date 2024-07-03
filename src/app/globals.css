@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Hellgrün: #5bbd82 */
 /* Hellblau: #4599c8 */
 
@@ -113,4 +112,21 @@
 
 .footerHeadline {
   @apply inter-body-sm font-medium hover:blur-sm uppercase;
+}
+
+/* MAP LEGENDE*/
+.legend {
+  @apply text-white mt-2 flex justify-center font-light  brightness-75 bg-zinc-900 inter-body-sm duration-500 p-2 md:p-4 rounded-xl;
+}
+
+.legend-item {
+  margin-right: 15px;
+}
+
+.legend-item:last-child {
+  margin-right: 0;
+}
+
+.legend-item input {
+  margin-right: 5px;
 }

@@ -1,4 +1,4 @@
-import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Label } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Cell,Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Label } from 'recharts';
 import { useEffect, useState } from 'react';
 
 export const BarChrt = ({ title, unit, URL }: { title: string, unit: string, URL: string}) => {
