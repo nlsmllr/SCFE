@@ -76,13 +76,12 @@ export const AirQuality = ({ title, subtitle, URL }: { title: string, subtitle: 
                   barSize={10}
                   startAngle={180} 
                   endAngle={0}
+                
                   data={componentsData}
             >
               <RadialBar 
-                minAngle={15} 
                 label={{ position: 'insideStart', fill: '#fff' }} 
                 background 
-                clockWise={true}
                 dataKey="value" 
               />
               <Legend 

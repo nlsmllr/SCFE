@@ -30,12 +30,13 @@ export const charts = [
   { component: <BarChrt title='Luftdruck' unit='(hPa)'  URL= {weatherAPI + "/pressure"} />, categories: [Categories.Weather], colSpan: 2 },
   
 
-  { component: <BarChrt title='Windgeschwindigkeit' unit='(meter/sec)'  URL= {weatherAPI + "/windspeed"}  />, categories: [Categories.Weather], colSpan: 2 },
-  { component: <BarChrt title='Windböen' unit='(meter/sec)'  URL= {weatherAPI + "/windgust"}  />, categories: [Categories.Weather], colSpan: 1 },
-  
+  { component: <BarChrt title='Windgeschwindigkeit' unit='(meter/sec)'  URL= {weatherAPI + "/wind_speed"}  />, categories: [Categories.Weather], colSpan: 2 },
+  { component: <BarChrt title='Windböen' unit='(meter/sec)'  URL= {weatherAPI + "/wind_gust"}  />, categories: [Categories.Weather], colSpan: 1 },
+  { component: <BarChrt title=' Atmosphärischer Druck auf dem Meeresspiegel' unit='(hPa)'  URL= {weatherAPI + "/sea_level"}  />, categories: [Categories.Weather], colSpan: 1 },
   { component: <AirQuality title='Luftqualität' subtitle='Wedel'URL= {airAPI + "/air_quality"}/>, categories: [Categories.Parking], colSpan: 2 },
   { component: <Map title='Karte' subtitle='Wedel' geojsonUrls={[
-      { url: mapAPI + "/parking", label: 'Parkplätze', color:'#000FFF', },
+      { url: mapAPI + "/parking_spaces", label: 'Parkplätze', color:'#000FFF', },
+      { url: mapAPI + "/charging_stations", label: 'Ladesäulen', color:'#0F0FFF', },
       { url: mapAPI + "/water_refill", label: 'Trinkwasserspender', color:'#00FFFF', },
       { url: mapAPI + "/heat/suitable_areas", label: 'Wärmekarte 1',color:'#FF00FF', },
       { url: mapAPI + "/heat/additional_areas", label: 'Wärmekarte 2',color:'#FF000F'}]}/>,
@@ -44,7 +45,7 @@ export const charts = [
 
 
 
-  //{ component: <BarChrt title=' Atmosphärischer Druck auf dem Meeresspiegel' unit='(hPa)'  URL= {weatherAPI + "sealevel"}  />, categories: [Categories.Weather], colSpan: 1 },
+  
   { component: <MultiLineChrt title='Air Pollution' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 1 },
   { component: <MultiLineChrt title='Co2 Concentration' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Parking], colSpan: 2 },
   { component: <PieChrt title='Air' subtitle='(%)' URL={temperatureURL} />, categories: [Categories.Weather], colSpan: 2 },
