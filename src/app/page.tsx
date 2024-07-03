@@ -43,13 +43,12 @@ export default function Void() {
         {showText && (
           <div className="fadeInTextBG">
             <Image src={logo} alt="alt Text" height={300}/>
-            {/* <h1 className="fadeInText">Smart Cities</h1> */}
           </div>
         )}
         <TopBar /> 
 
         <div className="relative group">
-          <Sidebar categories={['All', Categories.Weather, Categories.Parking, Categories.Traffic]} onCategorySelect={handleCategorySelect} />
+          <Sidebar categories={['All', Categories.Weather, Categories.Parking, Categories.Traffic, Categories.Trash]} onCategorySelect={handleCategorySelect} />
           <section className="graphContainer flex justify-center">
             <AnimatePresence>
               {filteredCharts.length > 0 ? (

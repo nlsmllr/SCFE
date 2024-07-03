@@ -1,5 +1,3 @@
-// src/components/Sidebar.tsx
-
 import React from 'react';
 import '../../globals.css';
 import { Categories } from '../../../Constants/categories';
