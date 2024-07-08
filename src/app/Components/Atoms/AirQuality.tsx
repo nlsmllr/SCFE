@@ -73,14 +73,14 @@ export const AirQuality = ({ title, subtitle, URL }: { title: string, subtitle: 
                   cy='50%'
                   innerRadius='0%'
                   outerRadius='110%'
-                  barSize={10}
+                  barSize={15}
                   startAngle={180} 
                   endAngle={0}
                 
                   data={componentsData}
             >
               <RadialBar 
-                label={{ position: 'insideStart', fill: '#fff' }} 
+                label={{ position: 'insideStart', fill: '#000' }} 
                 background 
                 dataKey="value" 
               />
@@ -99,6 +99,5 @@ export const AirQuality = ({ title, subtitle, URL }: { title: string, subtitle: 
             <p className="text-lg">O3: {airQualityData.components.o3}</p> 
             </div>
         </div>
-
       );
     };

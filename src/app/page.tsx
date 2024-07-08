@@ -16,7 +16,7 @@ import logo from './SC_logo.svg';
 
 export default function Void() {
   const [showText, setShowText] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<Categories | 'All' | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<Categories | 'Alle Daten' | null>(null);
 
   // Animation at pageload
   useEffect(() => {
@@ -29,11 +29,11 @@ export default function Void() {
 
 
   // Filter cagegory
-  const handleCategorySelect = (category: Categories | 'All') => {
+  const handleCategorySelect = (category: Categories | 'Alle Daten') => {
     setSelectedCategory(category);
   };
 
-  const filteredCharts = selectedCategory && selectedCategory !== 'All'
+  const filteredCharts = selectedCategory && selectedCategory !== 'Alle Daten'
     ? charts.filter(chart => chart.categories.includes(selectedCategory))
     : charts;
 
@@ -48,7 +48,7 @@ export default function Void() {
         <TopBar /> 
 
         <div className="relative group">
-          <Sidebar categories={['All', Categories.Weather, Categories.Parking, Categories.Traffic, Categories.Trash]} onCategorySelect={handleCategorySelect} />
+          <Sidebar categories={['Alle Daten', Categories.Weather, Categories.Maps, Categories.Trash]} onCategorySelect={handleCategorySelect} />
           <section className="graphContainer flex justify-center">
             <AnimatePresence>
               {filteredCharts.length > 0 ? (

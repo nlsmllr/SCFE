@@ -3,8 +3,8 @@ import '../../globals.css';
 import { Categories } from '../../../Constants/categories';
 
 interface SidebarProps {
-  categories: (Categories | 'All')[];
-  onCategorySelect: (category: Categories | 'All') => void;
+  categories: (Categories | 'Alle Daten')[];
+  onCategorySelect: (category: Categories | 'Alle Daten') => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ categories, onCategorySelect }) => {

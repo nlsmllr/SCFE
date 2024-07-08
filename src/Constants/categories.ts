@@ -1,6 +1,6 @@
 export enum Categories {
-  Weather = 'Weather',
-  Parking = 'Parking',
-  Traffic = 'Traffic',
-  Trash = 'Trash'
+  Weather = 'Wetter',
+  // Parking = 'Parken',
+  Maps = 'Karten',
+  Trash = 'Müllabfuhr'
 }

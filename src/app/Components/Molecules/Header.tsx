@@ -15,19 +15,19 @@ export const TopBar = () => {
   return (
     <nav className="header">
       <div className="flex items-baseline">
-        <a href="https://scfe.vercel.app/"><Image src={logo} alt={'logo no text'} height={70}/></a>
+        <a href="/"><Image src={logo} alt={'logo no text'} height={70}/></a>
       </div>
       <div className="flex items-end">
         <div className={`absolute md:relative bg-zinc-700 md:bg-transparent w-full md:w-auto left-0 md:left-auto right-0 bg-opacity-90 md:flex md:flex-row transition-transform duration-3000 ease-in ${menuOpen ? 'md:top-0 top-14' : 'top-[-490px]'}`}>
           <ul className="flex flex-col md:flex-row justify-end">
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
-              <a href="#home" className="menuBlock">Home</a>
+              <Link href="/" className="menuBlock">Home</Link>
             </li>
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
-              <a href="#about" className="menuBlock">About</a>
+              <Link href="#about" className="menuBlock">About</Link>
             </li>
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
-              <a href="#services" className="menuBlock">Services</a>
+              <Link href="#services" className="menuBlock">Services</Link>
             </li>
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
               <Link href="/Contact" className="menuBlock">Contact</Link>

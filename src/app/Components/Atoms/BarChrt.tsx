@@ -54,10 +54,10 @@ export const BarChrt = ({ title, unit, URL }: { title: string, unit: string, URL
             formatter={tooltipFormatter}
           />
           <Legend />
-          <Bar dataKey="02:00" fill="#00FFFF" animationBegin={1500} />
-          <Bar dataKey="08:00" fill="#FF00FF" fillOpacity={0.6} animationBegin={1700} />
-          <Bar dataKey="14:00" fill="#FFFF00" fillOpacity={0.6} animationBegin={1700} />
-          <Bar dataKey="20:00" fill="#00FF00" fillOpacity={0.6} animationBegin={1700} />
+          <Bar dataKey="02:00" fill="#ff8042" animationBegin={1500} />
+          <Bar dataKey="08:00" fill="#5bbd82" fillOpacity={0.6} animationBegin={1700} />
+          <Bar dataKey="14:00" fill="#8dd1e1" fillOpacity={0.6} animationBegin={1700} />
+          <Bar dataKey="20:00" fill="#ffc658" fillOpacity={0.6} animationBegin={1700} />
         </BarChart>
       </ResponsiveContainer>
     </div>
