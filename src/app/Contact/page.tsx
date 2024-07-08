@@ -48,6 +48,7 @@ export default function Contact() {
               <button
                 className="hover:bg-white hover:text-black text-white font-thin uppercase border py-2 px-4 rounded"
                 type="submit"
+                onClick={() => alert("Danke, Ihr Nachricht wurde verschickt")}
               >
                 Senden
               </button>
