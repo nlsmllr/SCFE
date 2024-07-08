@@ -23,12 +23,12 @@ export const TopBar = () => {
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
               <Link href="/" className="menuBlock">Home</Link>
             </li>
-            <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
+            {/* <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
               <Link href="#about" className="menuBlock">Über uns</Link>
             </li>
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
               <Link href="#services" className="menuBlock">Service</Link>
-            </li>
+            </li> */}
             <li className="p-4 md:p-0 md:mx-4 flex justify-center md:justify-start">
               <Link href="/Contact" className="menuBlock">Kontakt</Link>
             </li>
