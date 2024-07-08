@@ -1,16 +1,38 @@
-import { XAxis, YAxis, CartesianGrid, Cell,Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Label } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Cell, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Label } from 'recharts';
 import { useEffect, useState } from 'react';
 
-export const BarChrt = ({ title, unit, URL }: { title: string, unit: string, URL: string}) => {
-  const [data, setData] = useState([]);
+interface DataItem {
+  day: string;
+  [key: string]: string | number; // Allows for additional keys if necessary
+}
+
+export const BarChrt = ({ title, unit, URL }: { title: string, unit: string, URL: string }) => {
+  const [data, setData] = useState<DataItem[]>([]);
+  const [domain, setDomain] = useState<[number, number]>([0, 0]);
 
   useEffect(() => {
     // Fetch data from a local JSON file or an API endpoint
     fetch(URL)
       .then(response => response.json())
-      .then(data => setData(data))
+      .then((data: DataItem[]) => {
+        setData(data);
+        updateDomain(data);
+      })
       .catch(error => console.error('Error fetching data:', error));
   }, [URL]);
+
+  //Set y-axis dynamicly
+  const updateDomain = (data: DataItem[]) => {
+    const allValues = data.flatMap(item =>
+      Object.entries(item)
+        .filter(([key, value]) => key !== 'day' && typeof value === 'string')
+        .map(([key, value]) => parseFloat(value as string))
+    );
+
+    let minValue = Math.floor(Math.min(...allValues));
+    let maxValue = Math.ceil(Math.max(...allValues));
+    setDomain([minValue, maxValue]);
+  };
 
   const tooltipFormatter = (value: any) => {
     return `${value} ${unit}`;
@@ -25,7 +47,7 @@ export const BarChrt = ({ title, unit, URL }: { title: string, unit: string, URL
       <ResponsiveContainer width={'100%'} height={250}>
         <BarChart width={730} height={250} data={data}>
           <XAxis dataKey="day" />
-          <YAxis />
+          <YAxis type="number" domain={domain as [number, number]} />
           <Tooltip 
             contentStyle={{ backgroundColor: '#333', borderColor: '#333', color: '#fff' }} 
             cursor={{ fill: 'transparent' }}

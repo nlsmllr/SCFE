@@ -8,7 +8,7 @@ interface Streets {
   name: string;
 }
 
-const TrashCalendar = ({ title, subtitle }: { title: string; subtitle: string }) => {
+const TrashCalendar = ({ title, subtitle, host }: { title: string; subtitle: string, host:string }) => {
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState<Streets[]>([]);
   const [filteredSuggestions, setFilteredSuggestions] = useState<Streets[]>([]);
@@ -20,7 +20,7 @@ const TrashCalendar = ({ title, subtitle }: { title: string; subtitle: string })
   useEffect(() => {
     const fetchSuggestions = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/trash/streets');
+        const response = await fetch(host+"/api/trash/streets");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -91,9 +91,9 @@ const TrashCalendar = ({ title, subtitle }: { title: string; subtitle: string })
   const handleDownload = async (isPDF: boolean) => {
     if (selectedId !== null) {
       try {
-        const url = isPDF
-          ? `http://localhost:8080/api/trash/pdf?streetId=${selectedId}`
-          : `http://localhost:8080/api/trash/ics?streetId=${selectedId}`;
+        const url =  isPDF
+          ? `${host}/api/trash/pdf?streetId=${selectedId}`
+          : `${host}/api/trash/ics?streetId=${selectedId}`;
         const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Network response was not ok');
