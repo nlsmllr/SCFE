@@ -164,9 +164,6 @@ const TrashCalendar = ({ title, subtitle, host }: { title: string; subtitle: str
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 p-5">
-        <Image src={trashCan} alt="Trash Can" height={100} width={100} />
-      </div>
     </div>
   );
 };
